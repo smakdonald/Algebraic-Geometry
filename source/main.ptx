@@ -1,0 +1,1890 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <docinfo>
+
+    <!-- the other option is "long" which will produce an -->
+    <!-- entire front matter section with more headings   -->
+    <author-biographies length="short" />
+
+    <!--
+    <brandlogo url="http://abstract.pugetsound.edu" source="images/cover_aata_2014.png" />
+    -->
+
+    <!--
+    <covers front="images/original-front-cover-aata.pdf"
+            back="images/plain-back-cover-aata.pdf"/>
+    -->
+
+    <!-- Prefix to enhance Sage notebook contents -->
+    <!--
+    <initialism>AATA</initialism>
+    -->
+
+    <macros>
+        <!-- Operators     -->
+        \def\ann{\operatorname{ann}}
+        \newcommand{\Ass}{\operatorname{Ass}}
+        \def\Aut{\operatorname{Aut}}
+        \def\can{{\mathrm {can}}}
+        \def\char{\operatorname{char}}
+        \def\cp{\operatorname{CharPoly}}
+        \def\codim{\operatorname{codim}} 
+        \def\coker{\operatorname{coker}}
+        \DeclareMathOperator*{\colim}{colim} 
+        \def\cont{\operatorname{cont}} 
+        \def\diam{\operatorname{diam}} 
+        \def\dm{\operatorname{dim}} 
+        \DeclareMathOperator{\edim}{embdim} 
+        \def\End{\operatorname{End}} 
+        \def\eval{\operatorname{eval}} 
+        \def\Ext{\operatorname{Ext}} 
+        \def\Frac{\operatorname{Frac}}
+        \def\Fun{\operatorname{Fun}}
+        \def\Gal{\operatorname{Gal}}
+        \def\gcd{\operatorname{gcd}}
+        \newcommand{\GL}{\operatorname{GL}} 
+        \newcommand{\ht}{\operatorname{height}} 
+        \def\Hom{\operatorname{Hom}} 
+        \def\id{\operatorname{id}} 
+        \def\im{\operatorname{im}} 
+        \def\Inn{\operatorname{Inn}}
+        \def\ker{\operatorname{ker}}
+        \def\lcm{\operatorname{lcm}} 
+        \def\Mat{\operatorname{Mat}}
+        \newcommand{\Min}{\operatorname{Min}}
+        \def\mp{\operatorname{MinPoly}}
+        \def\mSpec{\operatorname{mSpec}}
+        \def\MSpec{\operatorname{MSpec}}
+        \def\null{\operatorname{Nul}}
+        \DeclareMathOperator{\ns}{nullspace}
+        \newcommand{\opp}{\operatorname{opp}}
+        \def\Orb{\operatorname{Orb}} 
+        \def\Out{\operatorname{Out}}
+        \def\Perm{\operatorname{Perm}}
+        \def\ptstab{\operatorname{PtStab}} 
+        \def\rad{\operatorname{rad}}
+        \DeclareMathOperator{\range}{range}
+        \def\rank{\operatorname{rank}}
+        \def\res{\operatorname{res}}
+        \def\setstab{\operatorname{SetStab}}
+        \def\sign{{\operatorname{sign}}}
+        \newcommand{\SL}{\operatorname{SL}}
+        \def\Span{\operatorname{Span}}
+        \def\Spec{\operatorname{Spec}}
+        \def\Stab{\operatorname{Stab}} 
+        \DeclareMathOperator{\Supp}{Supp}
+        \def\Syl{\operatorname{Syl}}
+        \def\Tor{\operatorname{Tor}}
+        \def\trace{\operatorname{trace}}
+        \def\uSpec{\operatorname{\underline{Spec}}}
+        <!-- Categories     -->
+        \newcommand{\Ob}{\mathrm{Ob}}
+        \newcommand{\Set}{\mathbf{Set}}
+        \newcommand{\Grp}{\mathbf{Grp}}
+        \newcommand{\Ab}{\mathbf{Ab}}
+        \newcommand{\Sgrp}{\mathbf{Sgrp}}
+        \newcommand{\Ring}{\mathbf{Ring}} 
+        \newcommand{\Fld}{\mathbf{Fld}}
+        \newcommand{\cRing}{\mathbf{cRing}}
+        \newcommand{\Mod}[1]{#1-\mathbf{Mod}} 
+        \newcommand{\Cx}[1]{#1-\mathbf{Comp}} 
+        \newcommand{\vs}[1]{#1-\mathbf{vect}}
+        \newcommand{\Vs}[1]{#1-\mathbf{Vect}}
+        \newcommand{\vsp}[1]{#1-\mathbf{vect}^+} 
+        \newcommand{\Top}{\mathbf{Top}} 
+        \newcommand{\Setp}{\mathbf{Set}_*} 
+        \newcommand{\Alg}[1]{#1-\mathbf{Alg}} 
+        \newcommand{\cAlg}[1]{#1-\mathbf{cAlg}} 
+        \newcommand{\PO}{\mathbf{PO}}
+        \newcommand{\Cont}{\mathrm{Cont}}
+        \newcommand{\MaT}[1]{\mathbf{Mat}_{#1}}
+        \newcommand{\Rep}[2]{\mathbf{Rep}_{#1}(#2)}
+        <!-- Greek     -->
+        \def\l{\lambda}
+        \def\lx{\lambda_x}
+        \newcommand{\a}{\alpha}
+        \def\b{\beta}
+        \def\d{\delta}
+        \def\e{\varepsilon}
+        \def\g{\gamma}
+        \def\t{\theta}
+        \def\s{\sigma}
+        \def\z{\zeta}
+        \def\vp{\varphi}
+        <!-- Letters     -->
+        <!-- MathBB     -->
+        \newcommand{\A}{\mathbb{A}}
+        \newcommand{\B}{\mathbb{B}}
+        \newcommand{\C}{\mathbb{C}}
+        \newcommand{\D}{\mathbb{D}}
+        \newcommand{\E}{\mathbb{E}}
+        \newcommand{\F}{\mathbb{F}}
+        \newcommand{\G}{\mathbb{G}}
+        \newcommand{\H}{\mathbb{H}}
+        \newcommand{\I}{\mathbb{I}}
+        \newcommand{\J}{\mathbb{J}}
+        \newcommand{\K}{\mathbb{K}}
+        \newcommand{\L}{\mathbb{L}} 
+        \newcommand{\M}{\mathbb{M}}
+        \newcommand{\N}{\mathbb{N}}
+        \newcommand{\O}{\mathbb{O}}
+        \newcommand{\P}{\mathbb{P}}
+        \newcommand{\Q}{\mathbb{Q}} 
+        \newcommand{\R}{\mathbb{R}} 
+        \newcommand{\S}{\mathbb{S}}
+        \newcommand{\T}{\mathbb{T}}
+        \newcommand{\U}{\mathbb{U}}
+        \newcommand{\V}{\mathbb{V}}
+        \newcommand{\W}{\mathbb{W}}
+        \newcommand{\X}{\mathbb{X}}
+        \newcommand{\Y}{\mathbb{Y}}
+        \newcommand{\Z}{\mathbb{Z}} 
+        \newcommand{\ON}{\mathbb{ON}}
+        <!-- MathCal     -->
+        \def\cA{\mathcal A} 
+        \def\cB{\mathcal B} 
+        \def\cC{\mathcal C} 
+        \def\cD{\mathcal D} 
+        \def\cE{\mathcal E} 
+        \def\cF{\mathcal F} 
+        \def\cG{\mathcal G} 
+        \def\cH{\mathcal H} 
+        \def\cI{\mathcal I} 
+        \def\cJ{\mathcal J} 
+        \def\cK{\mathcal K} 
+        \def\cL{\mathcal L}
+        \def\cM{\mathcal M} 
+        \def\cN{\mathcal N} 
+        \def\cO{\mathcal O} 
+        \def\cP{\mathcal P} 
+        \def\cQ{\mathcal Q} 
+        \def\cR{\mathcal R} 
+        \def\cS{\mathcal S} 
+        \def\cT{\mathcal T} 
+        \def\cU{\mathcal U} 
+        \def\cV{\mathcal V} 
+        \def\cW{\mathcal W} 
+        \def\cX{\mathcal X} 
+        \def\cY{\mathcal Y} 
+        \def\cZ{\mathcal Z} 
+        <!-- MathFrak     -->
+        \newcommand{\fa}{{\mathfrak a}} 
+        \newcommand{\fb}{{\mathfrak b}} 
+        \newcommand{\fc}{{\mathfrak c}} 
+        \newcommand{\fd}{{\mathfrak d}} 
+        \newcommand{\fe}{{\mathfrak e}}
+        \newcommand{\fm}{{\mathfrak m}} 
+        \newcommand{\fp}{{\mathfrak p}} 
+        \newcommand{\fq}{{\mathfrak q}} 
+        \newcommand{\fK}{{\mathfrak K}} 
+        \newcommand{\fR}{{\mathfrak R}} 
+        <!-- MathScr     -->
+        \def\sA{\mathscr A} 
+        \def\sB{\mathscr B} 
+        \def\sC{\mathscr C} 
+        \def\sD{\mathscr D} 
+        \def\sE{\mathscr E} 
+        \def\sF{\mathscr F} 
+        \def\sG{\mathscr G} 
+        \def\sH{\mathscr H} 
+        \def\sI{\mathscr I} 
+        \def\sJ{\mathscr J} 
+        \def\sK{\mathscr K} 
+        \def\sL{\mathscr L}
+        \def\sM{\mathscr M}
+        \def\sN{\mathscr N}
+        \def\sO{\mathscr O}
+        \def\sP{\mathscr P}
+        \def\sQ{\mathscr Q}
+        \def\sR{\mathscr R}
+        \def\sS{\mathscr S}
+        \def\sT{\mathscr T}
+        \def\sU{\mathscr U}
+        \def\sV{\mathscr V}
+        \def\sW{\mathscr W}
+        \def\sX{\mathscr X}
+        \def\sY{\mathscr Y}
+        \def\sZ{\mathscr Z}
+        <!-- Tildes     -->
+        \def\tS{\tilde{S}}
+        <!-- Algebra     -->
+        \def\sdp{\rtimes}
+        \newcommand{\tensor}{\otimes} 
+        \newcommand{\igen}[1]{\langle #1 \rangle} 
+        \def\nsg{\unlhd} 
+        \def\kval{{k-\mathrm{valued}}} 
+        \def\kalg{{k-\mathrm{alg}}}
+        \newcommand\GG[2]{\Gal(#1/#2)}
+        <!-- Matrices     -->
+        \newcommand{\MF}[3]{\Mat_{#1\times #2}(#3)}
+        \newcommand{\vectwo}[2]{\begin{bmatrix} #1 \\ #2 \end{bmatrix}} 
+        \newcommand{\vecthree}[3]{\begin{bmatrix} #1 \\ #2 \\ #3\end{bmatrix}} 
+        \def\ob{{\mathfrak{ob}} }
+        <!-- Misc     -->
+        \def\qed{\square}
+        \def\sse{\subseteq}
+        \def\ss{\subset} 
+        \def\ssne{\subsetneq}
+        \def\sm{\setminus}
+        \def\inv{^{-1}} 
+        \newcommand{\es}{\emptyset} 
+        \newcommand{\Zm}[1]{\Z/({#1})} 
+        \def\ov#1{\overline{#1}} 
+        \def\xdots{x_1, \dots, x_n} 
+        \def\adots{a_1, \dots, a_n} 
+        \def\bdots{b_1, \dots, b_n} 
+        \def\udots{u_1, \dots, u_n} 
+        \newcommand{\leg}[2]{\left(\frac{{#1}}{{#2}}\right)} 
+        \def\th{^{th}} 
+        \def\htpy{\simeq_{\mathrm{htpc}}} 
+        <!-- Math Text     -->
+        \def\textand{ \, \text{and} \, } 
+        \def\textor{ \, \text{or} \, } 
+        \def\textfor{ \, \text{for} \, } 
+        \def\textfa{ \, \text{for all} \, } 
+        \def\textst{ \, \text{such that} \, } 
+        \def\textin{ \, \text{in} \, } 
+        \def\fg{ \, \text{finitely generated} \, }
+        \newcommand{\op}{\mathrm{op}}
+        <!-- Arrows     -->
+        \newcommand{\xra}[1]{\xrightarrow{#1}} 
+        \newcommand{\xora}[1]{\xtwoheadrightarrow{#1}} 
+        \newcommand{\xira}[1]{\xhookrightarrow{#1}} 
+        \newcommand{\xla}[1]{\xleftarrow{#1}} 
+        \def\lra{\longrightarrow}
+        \def\into{\hookrightarrow}
+        \def\onto{\twoheadrightarrow}
+        <!-- Vectors     -->
+        \newcommand{\vv}[1]{\mathbf{#1}}
+        \newcommand{\lm}[2]{{#1}\,\l + {#2}\,\mu} 
+        \renewcommand{\v}{\vv{v}}
+        \renewcommand{\u}{\vv{u}}
+        \newcommand{\w}{\vv{w}}
+        \newcommand{\x}{\vv{x}}
+        \renewcommand{\k}{\vv{k}}
+        \newcommand{\0}{\vv{0}}
+        \newcommand{\1}{\vv{1}}
+        \newcommand{\vecs}[2]{#1_1,#1_2,\dots,#1_{#2}}
+        \newcommand{\us}[1][n]{\vecs{\u}{#1}}
+        \newcommand{\vs}[1][n]{\vecs{\v}{#1}}
+        \newcommand{\ws}[1][n]{\vecs{\w}{#1}}
+        \newcommand{\vps}[1][n']{\vecs{\v'}{#1}}
+        \newcommand{\ls}[1][n]{\vecs{\l}{#1}}
+        \newcommand{\mus}[1][n]{\vecs{\mu}{#1}} 
+        \newcommand{\lps}[1][n]{\vecs{\l'}{#1}}
+        \def\td{\tilde{\delta}}
+        \def\oo{\overline{\omega}}
+        \def\ctJ{\tilde{\mathcal J}}
+        \def\tPhi{\tilde{\Phi}}
+        \def\te{\tilde{e}}
+        \def\M{\operatorname{M}}
+        \newcommand{\homotopic}{\simeq}
+        \newcommand{\homeq}{\cong}
+        \newcommand{\iso}{\approx}
+        \newcommand{\dual}{\vee} 
+        \DeclarePairedDelimiter{\abs}{|}{|}
+        \newcommand{\bv}{{\bar{v}}}
+        \newcommand{\bu}{{\bar{u}}}
+        \newcommand{\bw}{{\bar{w}}}
+        \newcommand{\by}{{\bar{y}}}
+        \newcommand{\ba}{{\bar{a}}}
+        \newcommand{\bb}{{\bar{b}}}
+        \newcommand{\bx}{{\bar{x}}}
+        \DeclarePairedDelimiterX\setof[2]{\{}{\}}{#1\,|\,#2}
+        \newcommand{\vx}{\underline{x}}
+        \renewcommand{mod}[1]{\text{(mod }{#1})}
+        \newcommand{\Slv}[3]{\sum_{{#2}=1}^{{#3}} {#1}_{{#2}} \v_{{#2}}}
+    </macros>
+
+    <!-- this is the default, but supresses a warning -->
+    <cross-references text="type-global" />
+
+    <!-- tikz package and libraries for images -->
+    <latex-image-preamble>
+      \usepackage{tikz}
+      \usetikzlibrary{backgrounds}
+      \usetikzlibrary{snakes}
+      \usepackage{tkz-graph}
+      \usepackage{tkz-euclide}
+      \usetikzlibrary{patterns}
+      \usetikzlibrary{positioning}
+      \usetikzlibrary{matrix,arrows}
+      \usetikzlibrary{calc}
+      \usetikzlibrary{shapes}
+      \usetikzlibrary{through,intersections,decorations,shadows,fadings}
+      
+      \usepackage{pgfplots}
+    </latex-image-preamble>
+
+    <rename element="insight">Mark</rename>  
+    <rename element="inlineexercise">Exploration</rename>
+    <rename element="exploration">Discussion</rename>
+
+  </docinfo>
+
+  <book xml:id="my-great-book">
+    <title>Algebraic Geometry</title>
+
+    <frontmatter xml:id="frontmatter">
+
+      <titlepage>
+        <author>
+          <personname>Sam Macdonald</personname>
+          <department>Department of Mathematics</department>
+          <institution>University of Nebraska -- Lincoln</institution>
+        </author>
+        <date>
+          <today />
+        </date>
+      </titlepage>
+
+      <colophon>
+        <website>
+          <name>
+            <c>smakdonald.github</c>
+          </name>
+          <address>https://smakdonald.github.io/index.html</address>
+        </website>
+
+        <copyright>
+          <year>2020<ndash />2023</year>
+          <holder>Sam Macdonald</holder>
+          <shortlicense> 
+            This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
+          </shortlicense>
+        </copyright>
+      </colophon>
+
+      <acknowledgement>
+        <p>
+          The content of this text is heavily based on the 817-818 sequence of courses offered in UNL, specificlly those taught during the 2021 and 2022 academic years. As such the content and structure have been heavily based on the notes of the following faculty:
+          <ul>
+            <li>
+              <p>
+                <url href="https://eloisagrifo.github.io/" visual="">Eloísa Grifo</url>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <url href="https://www.math.unl.edu/~aseceleanu2/" visual="">Alexandra Seceleanu</url>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <url href="https://executivevc.unl.edu/faculty/faculty-affairs-team" visual="">Mark Walker</url><fn>Mark has somehow managed to be the only member of the mathematics faculty to not have so much as a single page on the UNL website. Luckily, there are workarounds.</fn>
+              </p>
+            </li>
+          </ul>
+          I am very thankful to Eloísa, Alexandra, and Mark for sharing their <em>.tex</em> files with me, despite the fact that they had no idea what I would be doing with them. Fittingly, I would also like to acknowledge Eloísa for having an acknowledgement section in her lecture notes, yielding a template for my own.
+        </p>
+
+        <p>And, as always, I reserve a speical thank you for <url href="https://sites.google.com/willamette.edu/emcnicholas/home" visual="">Erin McNicholas</url> and <url href="https://willamette.edu/undergraduate/math/faculty/johnson/index.html" visual="">Inga Johnson</url> for forever tinting the world of mathematics purple.</p>
+
+      </acknowledgement>
+
+      <preface><title>How to Use This Book (*)</title>
+
+        <p>
+          I'm still in the process of figuring out exactly what this is for. Some possibilities include:
+          <ul>
+            <li>
+              <p>
+                Future lecture notes for the hopeful possibility that one day I will teach a course over this material.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Current notes for students taking the first year algebra sequence. 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Assistance in studying for the Algebra Qualifying Exam at UNL.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Clout.
+              </p>
+            </li>
+          </ul>
+        </p>
+
+
+        <paragraphs><title>Blocks</title>
+          <p>
+            Here are the types of environments you are likely to encounter throughout the text and what they are used for.
+            <ul>
+              <li><title><term>Definition</term></title>
+                <p>
+                  These are pretty standard and probably what you'd be expecting. 
+                  The building blocks of what we'll be working with. 
+                </p>
+              </li>
+
+              <li><title><term>Examples</term></title>
+                <p>
+                  Specific instances of a definition.
+                  For example, the empty set, <m>\emptyset</m> is an example of a set, and thus would be contained within an <q>example</q> environment.
+                  At some point the line between example and definition becomes incoherently blurred, but I have done my best to keep things consistent.
+                </p>
+              </li>
+
+              <li><title><term>Theorem</term></title>
+                <p>
+                  A result. 
+                </p>
+              </li>
+
+              <li><title><term>Lemma</term></title>
+                <p>
+                  A more technical result used specifically in the proof of a larger result.
+                </p>
+              </li>
+
+              <li><title><term>Corollary</term></title>
+                <p>
+                  An important result whose proof comes directly from a previous theorem.
+                </p>
+              </li>
+
+              <li><title><term>Proposition</term></title>
+                <p>
+                  Results that require proof but are more specific and/or contained in a larger result coming later.
+                </p>
+              </li>
+
+              <li><title><term>Exploration</term></title>
+                <p>
+                  Generalizations, specifics, smaller results, things are are less essential to the course or results who's proofs are usually skipped. 
+                </p>
+              </li>
+
+              <li><title><term>Problem</term></title>
+                <p>
+                  Used for qualifying exam problems.
+                </p>
+              </li>
+
+              <li><title><term>Remark</term></title>
+                <p>
+                  Providing context in the form of foreshadowing or content not covered in this text.
+                  In general, there shouldn't be anything defined in a remark, they should be entirely optional. 
+                </p>
+              </li>
+
+              <li><title><term>Convention</term></title>
+                <p>
+                  
+                </p>
+              </li>
+
+              <li><title><term>Discussion</term></title>
+                <p>
+                  Usually for arguing about notation.
+                </p>
+              </li>
+
+              <li><title><term>Footnotes</term></title>
+                <p>
+                  Sometimes act like remarks. However, most are strictly for fun and add little to no educational value, at least in the traditional sense.<fn>It should really be <q>feetnote</q> if you think about it.</fn> 
+                </p>
+              </li>
+            </ul>
+            
+            
+          </p>
+          
+        </paragraphs>
+
+      </preface>
+
+      <preface><title>Guide to Proof Writing</title>
+
+        <p>
+          <ol>
+            <li>
+              <p>
+                Never use the words "obvious", "clearly", "trivial", "of course", or synonyms of these.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write words rather than symbols or abbreviations - a long string of symbols isn't as readable as an English sentence. 
+                Specifically: For all proofs you hand in, write out "for all", "there is", "implies", "if and only if", "therefore", "because", "such that", "for example". 
+                (That is, the symbols ∀, ∃, ⇒, ⇔, ∴, ∵, and s.t., should be avoided.)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Every time you apply a definition, theorem, proposition, lemma, corollary, exercise, etc., in a proof that you are writing up, reference it. 
+                Reference a theorem, lemma, or proposition by its number in the text; reference a definition as "the definition of ___" (or by its number in the text). 
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Write sentences and paragraphs, and use correct grammar and punctuation. 
+                (For example, every sentence should end with a period.)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Follow the standard mathematical conventions for notation.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Define every new variable letter at the first point it appears in your proof.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The first sentence of a proof should suppose the hypotheses, and the last sentence of a proof should conclude the conclusion.
+              </p>
+            </li>
+          </ol>
+        </p>
+      
+      
+        
+      </preface>
+
+    </frontmatter>
+
+    <chapter xml:id="ch-affine-varieties"><title>Affine Varieties</title>
+
+      <section xml:id="sec-classical-affine"><title>Classical Affine Varieties</title>
+        
+        <p>
+          Throughout this class, <m>k</m> will always denote a field and we will often assume that <m>k</m> is an algebraically closed field. 
+          It will rarely cause problems to assume <m>k = \mathbb{C}</m>, in fact.
+        </p>
+
+        <definition xml:id="def-affine-space">
+          <statement>
+            <p>
+              For an arbitrary field <m>k</m>, <em>affine <m>n</m>-space</em> over <m>k</m>, written <m>\mathbb{A}^n_k</m>, is the set of <m>n</m>-tuples of elements of <m>k</m>: 
+              <me>
+                \mathbb{A}^n_k = \{(a_1, \dots, a_n) \mid a_i \in k\}.
+              </me>
+            </p>
+          </statement>
+        </definition>
+
+        <p>
+          So, <m>\mathbb{A}^n_k</m> is just <m>k^n</m>, but we avoid using the latter since <m>k^n</m> is the usual notation of the standard <m>n</m>-dimensional <m>k</m>-vector space. Affine space is not thought of as a vector space typically.
+        </p>
+
+        <definition xml:id="def-zero-locus">
+          <statement>
+            <p>
+              Recall <m>k[x_1, \dots, x_n]</m> is the ring of all polynomials in the <m>n</m> variables <m>x_1, \dots, x_n</m> having <m>k</m> coefficients. 
+              For any subset <m>S</m> of <m>k[x_1, \dots, x_n]</m>, the <em>zero locus</em> of <m>S</m>, written <m>V(S)</m>, is the subset of <m>\mathbb{A}^n_k</m> giving the common zeroes of all the members of <m>S</m>; that is, 
+              <me>
+                V(S) := \{(a_1, \dots, a_n) \in \mathbb{A}^n_k \mid f(a_1, \dots, a_n) = 0, \text{ for all $f \in S$}\} \subseteq \mathbb{A}^n_k.
+              </me> 
+            </p>
+          </statement>
+        </definition>
+
+        <convention>
+          <p>
+            When we need to indicate the ground field, we write <m>V_k(S)</m> for <m>V(S)</m>. Also, given a finite list <m>f_1, \dots, f_m \in k[x_1, \dots, x_n]</m>, by <m>V(f_1, \dots, f_m)</m> we mean <m>V(\{f_1, \dots, f_m\})</m>.
+          </p>
+        </convention>
+
+        <definition xml:id="def-classical-affine-variety">
+          <statement>
+            <p>
+              A <em>classical affine variety</em> is a subset of <m>\mathbb{A}^n_k</m>, for some <m>n</m>, that is equal to <m>V(S)</m> for some subset <m>S</m> of <m>k[x_1, \dots, x_n]</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <exercise>
+          <statement>
+            <p>
+              Draw <m>V_{\mathbb{R}}(x^2 + y^2 - z, x+y+z+1)</m> (when <m>k = {\mathbb{R}}</m>). (Yes, I realize <m>{\mathbb{R}}</m> is not algebraically closed; one instance in which we drop this assumption is when we wish to draw a variety.)
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Let <m>V = \{(t, t^2, t^3) \mid t \in k\} \subseteq \mathbb{A}^3_k</m>. Prove <m>V</m> is an affine variety.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Let <m>V = \{(t, e^t) \mid t \in \mathbb{C}\} \subseteq \mathbb{A}^2_\mathbb{C}</m>. Prove <m>V</m> is not an affine variety.            
+            </p>
+          </statement>
+        </exercise>
+
+        <example>
+          <statement>
+            <p>
+              Any singleton <m>\{(a_1, \dots, a_n)\}</m> is an affine variety, since it is the zero locus of the set <m>\{x_1 - a_1, \dots, x_n - a_n\}</m>.
+            </p>
+          </statement>
+        </example>
+
+        <exercise>
+          <statement>
+            <p>
+              Prove that any finite set of points of <m>\mathbb{A}^n_k</m> for any <m>n \geq 1</m> is an affine variety.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Is a countably infinite set of points in <m>\mathbb{A}^n_\mathbb{C}</m> an affine variety?
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Thinking of <m>\mathbb{A}^n_k</m> as a vector space for once, prove that every linear subspace is an affine variety. More generally, show every translate of a linear subspace is an affine variety.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Show <m>S = \mathbb{A}^2_k \setminus \{(0,0)\} = \{(a,b) \in \mathbb{A}^2_k \mid (a,b) \ne (0,0)\}</m> is not an affine variety whenever <m>k</m> is an infinite field. 
+              (We will eventually define the more general notion of a <q>variety</q>, and we will see that this <em>is</em> a (non-affine) variety.) 
+              Is this true when <m>k</m> is a finite field?
+            </p>
+          </statement>
+        </exercise>
+
+        <p>
+          For a subset <m>S</m> of <m>k[x_1, \dots, x_n]</m>, let <m>\langle S \rangle</m> denote the ideal of this ring generated by <m>S</m>; that is, 
+          <me>
+            \langle S \rangle= \{f_1 g_1 + \cdots + f_m g_m \mid m \geq 0, f_i \in k[x_1, \dots, x_n], g_i \in S, \text{ for all $i$}\}.
+          </me> 
+          For any ideal <m>I</m>, we let <m>\sqrt{I} = \{f \in k[x_1, \dots, x_n] \mid f^m \in I, \text{ for some $m \geq 1$}\}</m>, the <em>radical of <m>I</m></em>. 
+          The radical of an ideal is again an ideal.
+        </p>
+
+        <proposition xml:id="prop-locus-radical">
+          <statement>
+            <p>
+              For any subset <m>S</m> of <m>k[x_1, \dots, x_n]</m> we have <me>V(S) = V(\langle S \rangle) = V(\sqrt{\langle S \rangle }).</me> In particular, <m>V(I) = V(\sqrt{I})</m> for any ideal <m>I</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              The containments <m>\supseteq</m> hold since <m>S \subseteq \langle S \rangle  \subseteq \sqrt{(S)}</m>. 
+              Say <m>P \in V(S)</m>. 
+              An arbitrary element of <m>\langle S \rangle</m> has the form <m>f  = f_1 g_1 + \cdots + f_m g_m</m> with <m>f_i \in k[x_1, \dots, x_n]</m> and <m>g_i \in S</m> for all <m>i</m>. 
+              We have <m>f(P) = \sum_i f_i(P) g_i(P) = \sum_i f_i(P) \cdot 0 = 0</m>. 
+              This proves <m>V(S) = V(\langle S \rangle)</m>. 
+              Given any ideal <m>I</m>, if <m>P \in V(I)</m> and <m>f</m> is such that <m>f^n \in I</m>, then <m>f(P)^n = (f^n)(P) = 0</m> and hence <m>f(P) = 0</m>. 
+              This proves <m>V(I) = V(\sqrt{I})</m>.
+            </p>
+          </proof>
+        </proposition>
+
+        <p>
+				  Thanks to this proposition, we can redifine an affine variety to be a subset of the form <m>V(J)</m> where <m>J</m> is an ideal (or even a radical ideal).
+			  </p>
+
+        <p>
+          Here are some easy-to-prove properties of the rule <m>I \mapsto V(I)</m> sending ideals to varieties.
+        </p>
+
+        <proposition>
+          <statement>
+            <p>
+              For any fixed <m>n</m>:
+              <ol>
+                <li>
+                  <p>
+                    If <m>I \subseteq J \subseteq k[x_1, \dots, x_n]</m> then <m>V(J) \subseteq V(I)</m>.
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    If <m>I, J \subseteq k[x_1, \dots, x_n]</m> then <m>V(I) \cup V(J)= V(I \cdot J)</m> where <m>I \cdot J</m> is the ideal generated by all products of elements of the form <m>ab</m> with <m>a \in I</m> and <m>b \in J</m>. 
+                    In particular, the union of a pair of affine varieties in <m>\mathbb{A}^n_k</m> is again an affine variety.
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    If <m>\{I_\alpha\}_{\alpha \in A}</m> is any collection of ideals of <m>k[x_1, \dots, x_n]</m>, then 
+                    <me>
+                      \bigcap_{\alpha \in A} V(I_\alpha) = V(\sum_{\alpha \in A} I_\alpha).
+                    </me> 
+                    where <m>\sum_{\alpha\in A} I_\alpha</m> is the smallest ideal containing <m>I_\alpha</m> for all <m>\alpha</m>. 
+                    In particular, an arbitrary intersection of affine varieties in <m>\mathbb{A}^n</m> is again an affine variety.
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    <m>V(0)  = \mathbb{A}^n_k</m>. 
+                    In particular, <m>\mathbb{A}^n_k</m> is an affine variety.
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    <m>V(1) = \emptyset</m>. 
+                    In particular, the empty set is an affine variety.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              I’ll just prove the second one: If <m>P \in V(I) \cup V(J)</m> then for all <m>f \in I</m>, <m>g \in J</m> we have <m>(fg)(P) = f(P) g(P) = 0</m> since either <m>f(P) = 0</m> or <m>g(P) = 0</m>. 
+              Thus <m>P \in V(\{f g \mid f \in I, g \in J\}) = V(IJ)</m>, where the last equality uses <xref ref="prop-locus-radical" />.
+            </p>
+
+            <p>
+              Say <m>P \notin V(I) \cup V(J)</m>. 
+              Then for any <m>f \in I, g \in J'</m>, we have <m>f(P) \ne 0</m> and <m>g(P) \ne 0</m> and thus <m>(fg)(P) = f(P) g(P) \ne 0</m>. 
+              This proves <m>P \notin V(\{f g \mid f \in I, g \in J\}) = V(IJ)</m>.
+            </p>
+          </proof>
+        </proposition>
+
+        <p>
+          Recall:
+        </p>
+
+        <theorem xml:id="thm-hilbert">
+          <statement>
+            <p>
+              The ring <m>k[x_1, \dots, x_n]</m> is noetherian. 
+              That is, every ideal of it is finitely generated or, equivalently, the collection of all ideals of this ring has the acc.
+            </p>
+          </statement>
+        </theorem>
+
+        <p>
+          We won’t prove this Theorem in this class; I assume you’ve seen it before.
+        </p>
+
+        <corollary>
+          <statement>
+            <p>
+              For any field <m>k</m>, every affine variety <m>V</m> in <m>\mathbb{A}^n_k</m> is the zero locus of a <em>finite</em> list of polynomials.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              By <xref ref="prop-locus-radical" /> we may assume <m>V = V(I)</m> for a (radical) ideal <m>I</m>. By the HBT we have <m>I = \langle g_1, \dots, g_m \rangle</m> for some <m>g_i</m>’s and hence (using the Proposition again) <m>V = V(g_1, \dots, g_m)</m>.
+            </p>
+          </proof>
+        </corollary>
+
+        <p>
+          So far we have started with ideals (or even just sets) of polynomials and used them to produce ideals. There is a <q>backwards</q> function too:
+        </p>
+
+        <definition xml:id="def-iw">
+          <statement>
+            <p>
+              For and <m>n</m> and any subset <m>W</m> of <m>\mathbb{A}^n_k</m>, let <m>I(W)</m> denote the set of all polynomials that vanish at every point of <m>W</m>: 
+              <me>
+                I(W) = \{f \in k[x_1, \dots, x_n] \mid \, \text{$f(a_1, \dots, a_n) = 0$ for all $(a_1, \dots, a_n) \in W$} \}.
+              </me>
+            </p>
+          </statement>
+        </definition>
+
+        <proposition>
+          <statement>
+            <p>
+              For any subset <m>W</m> of <m>\mathbb{A}^n_k</m>, <m>I(W)</m> is a radical ideal in <m>k[x_1, \dots, x_n]</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              If <m>g \in I(W)</m> and <m>f \in k[x_1, \dots, x_n]</m> then for all <m>P \in I(W)</m> we have <m>(fg)(P) = f(P) g(P) = f(P) 0 = 0</m> and hence <m>fg \in I(W)</m>. 
+              Similarly one shows <m>I(W)</m> is closed under addition. 
+              Since clearly <m>0 \in I(W)</m>, <m>I(W)</m> is an ideal. 
+              If <m>f^n \in I(W)</m> for some <m>n \geq 1</m>, then for all <m>P \in W</m> we have <m>0 = (f^n)(P) = (f(P))^n</m> and hence <m>f(P) = 0</m>. 
+              So <m>f \in I(W)</m>, and this proves <m>I(W)</m> is radical.
+            </p>
+          </proof>
+        </proposition>
+
+        <p>
+          The next result is immediate from the definitions:
+        </p>
+
+        <proposition>
+          <statement>
+            <p>
+              If <m>W</m> and <m>W'</m> are two subsets of <m>\mathbb{A}^n_k</m>, then:
+              <ol>
+                <li>
+                  <p>
+                    <m>I(W \cup W') = I(W) \cap I(W')</m>.
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    If <m>W \subseteq W'</m> then <m>I(W) \supseteq I(W')</m>.
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+        </proposition>
+
+        <p>
+          What would you guess is true about <m>I(W \cap W')</m>?
+        </p>
+
+        <exercise>
+          <statement>
+            <p>
+              Find a counter-example to the <q>obvious guess</q> that <m>I(W \cap W') = \sqrt{I(W) + I(W')}</m> for <m>k = {\mathbb{R}}</m>.
+            </p>
+          </statement>
+        </exercise>
+
+        <p>
+          The function <m>V</m> takes radical ideals to affine varieties and the function <m>I</m> takes affine varieties to radical ideals. Are they mutually inverse?
+        </p>
+
+        <proposition>
+          <statement>
+            <p>
+              For any field <m>k</m> the following hold:
+              <ol>
+                <li>
+                  <p>
+                    Given a radical ideal <m>J</m> of <m>k[x_1, \dots, x_n]</m> we have 
+                    <me>
+                      I(V(J)) \supseteq J.
+                    </me> 
+                    (This holds in fact for any <em>subset</em> <m>J</m>.)
+                  </p>
+                </li>
+        
+                <li>
+                  <p>
+                    Given an affine variety <m>W</m> in <m>\mathbb{A}^n_k</m> we have 
+                    <me>
+                      V(I(W)) = W
+                    </me> 
+                    (For any <em>subset</em> W, we have <m>V(I(W)) \supseteq W</m>)
+                  </p>
+                </li>
+              </ol>
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              If <m>f \in J</m>, then for each <m>P \in V(J)</m> we have, by definition, that <m>f(P) = 0</m> and hence, again by definition, <m>f \in I(V(J))</m>. 
+              Note that this remains valid if <m>J</m> is any subset.
+            </p>
+
+            <p>
+              For the second one, pick <m>P \in W</m>. 
+              For any <m>f \in I(W)</m> we have, by definition, <m>f(P) = 0</m>. 
+              Again by definition this means <m>P \in V(I(W))</m>. 
+              Thus <m>W \subseteq V(I(W))</m>. 
+              Note that this containment holds if <m>W</m> is any subset. 
+              Now assume <m>W</m> is an affine variety. 
+              Then <m>W = V(J)</m> for some radical ideal <m>J</m>. 
+              By the first part we have <m>I(V(J)) \supseteq J</m> and hence <m>V(I(V(J))) \subseteq V(J)</m>. 
+              Substituting <m>W</m> for <m>V(J)</m> yields <m>V(I(W)) \subseteq W</m> and hence <m>V(I(W)) = W</m>.
+            </p>
+          </proof>
+        </proposition>
+
+        <p>
+          Can you find an example where the containment <m>I(V(J)) \supseteq J</m> is strict, say for the ring <m>{\mathbb{R}}</m>?
+        </p>
+  
+        <p>
+          Here is one:
+        </p>
+
+        <example>
+          <p>
+            Take <m>J = \langle x^2 + y^2 \rangle</m> and <m>k = {\mathbb{R}}</m>, and note that <m>J</m> is a radical ideal since <m>x^2+y^2</m> is an irreducible polynomial (why?). 
+            We have <m>V(J) = \{(0,0)\}</m> and so <m>I(V(J)) = \langle x,y \rangle \supsetneq J</m>.
+          </p>
+        </example>
+
+        <remark>
+          <p>
+            It would seem that by symmetry one ought to be able to show <m>I(V(J)) = J</m> holds for any radical ideal in the same manner that we proved <m>V(I(W)) = W</m> for any affine variety <m>W</m>, but this does not work as the previous example shows. 
+            What goes wrong? The symmetric proof does show that <m>I(V(J)) = J</m> <em>for any ideal <m>J</m> that has the form <m>I(W)</m> for some <m>W</m></em>, but it is not true that every radical ideal <m>J</m> is of this form for any field. 
+            Indeed, for <m>J</m> as in the previous example, <m>J</m> is a radical ideal and yet <m>J \ne I(W)</m> for any subset <m>W</m> of <m>\mathbb{A}^n_{\mathbb{R}}</m>.
+          </p>
+        </remark>
+        
+
+      </section>
+
+      <section xml:id="sec-nullstellensatz"><title>Hilbert’s Nullstellensatz</title>
+        
+        <p>
+          Henceforth, we will assume <m>k</m> is algebraically closed unless otherwise specified.
+        </p>
+
+        <lemma xml:id="lem122">
+          <statement>
+            <p>
+              Let <m>R</m> be a commutative ring, <m>r \in R</m> an element of <m>R</m>, and <m>S = \{r^j \mid j \geq 1\}</m> the multiplicatively closed subset of <m>R</m> generated by <m>r</m>. There is an isomorphism <me>\alpha:
+              R[y]/(1 -yr) \xrightarrow{\cong} S^{-1}R</me> of <m>R</m>-algebras given by <m>\alpha(\overline{g(y)}) =g\left(\frac{1}{r}\right).</m>
+            </p>
+          </statement>
+        </lemma>
+
+        <theorem xml:id="thm-StrongHN">
+          <statement>
+            <p>
+              Assume <m>k</m> is an algebraically closed. 
+              Then 
+              <me>
+                I(V(J)) = J { \text{ and } }V(I(W)) = W
+              </me> 
+              for any radical ideal <m>J</m> of <m>k[x_1, \dots, x_n]</m> and any affine variety <m>W</m> in <m>\mathbb{A}^n_k</m>.
+            </p>
+
+            <p>
+              Thus, there is a order-reversing bijection between the poset (under containment) of all affine varieties in <m>\mathbb{A}^n_k</m> and the poset (under containment) of all radical ideals in <m>k[x_1, \dots, x_n]</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Let now <m>J</m> be any ideal of <m>k[x_1, \dots, x_n]</m>. 
+              We need to show that <m>I(V(J)) \subseteq \sqrt{J}</m>. 
+              Pick <m>f \in I(V(J))</m>; that is, assume <m>f</m> is a polynomial such that <m>f(a_1, \dots, a_n) = 0</m> for every <m>(a_1, \dots, a_n) \in V(J)</m>. 
+              It suffices to prove <m>f^m = 0</m> in the quotient ring <m>k[x_1, \dots, x_n]/J</m> for some <m>m \geq 1</m>, for this implies <m>f \in \sqrt{J}</m>.
+            </p>
+      
+            <p>
+              Let <m>L</m> be the ideal of <m>k[x_1, \dots, x_n, y]</m> generated by (the image of) <m>J</m> and <m>1 - yf(x_1, \dots, x_n)</m>. 
+              I claim <m>V(L)</m> is the empty set: If <m>(a_1, \dots, a_n, b) \in V(L)</m> then <m>(a_1, \dots, a_n) \in V(J)</m> and so <m>f(a_1, \dots, a_n) = 0</m>. 
+              But we also have <m>b f(a_1, \dots, a_n) = 1</m>, which is impossible.
+            </p>
+      
+            <p>
+              Since <m>V(L) = \emptyset</m>, by the Weak Nullstellensatz we must have <m>L = \langle 1 \rangle</m>.
+            </p>
+      
+            <p>
+              Now, by <xref ref="lem122" /> there is an isomorphism 
+              <me>
+                \frac{(k[x_1, \dots, x_n]/J) [ y]}{(1 - yf)} \xrightarrow{\cong} S^{-1} k[x_1, \dots, x_n]/J
+              </me> 
+              of commutative rings, where <m>S = \{f^m \mid m \geq 1\}</m>. 
+              We also have the canonical isomorphism 
+              <me>
+                \frac{(k[x_1, \dots, x_n]/J) [ y]}{(1 - yf)} \cong \frac{(k[x_1, \dots, x_n, y]}{\langle J \rangle + (1 - yf)} = k[x_1, \dots, x_n, y]/L.
+              </me> 
+              Since <m>L = \langle 1 \rangle</m>, this proves that <m>S^{-1} (k[x_1, \dots, x_n]/J)</m> is the trivial ring, and hence <m>\frac{1}{1} = \frac{0}{1}</m> in this ring. 
+              Thus <m>f^m = 0</m> in <m>k[x_1, \dots, x_n]/J</m> for some <m>m</m>.
+            </p>
+          </proof>
+        </theorem>
+
+        <exercise>
+          <statement>
+            <p>
+              Prove: If <m>k</m> is algebraically closed, then for any set <m>S</m> of polynomials we have <m>I(V(S)) = \sqrt{\langle S \rangle}</m>. 
+              In particular, <m>I(V(J)) = \sqrt{J}</m> for any ideal <m>J</m>. 
+              Moreover, if <m>T</m> is any subset of <m>\mathbb{A}^n_k</m>, <m>V(I(T))</m> is the unique smallest affine variety in <m>\mathbb{A}^n_k</m> that contains <m>T</m>.
+            </p>
+          </statement>
+        </exercise>
+
+        <exercise>
+          <statement>
+            <p>
+              Prove that <m>I(V(J)) = J</m> holds for all radical ideals if and <em>only if</em> <m>k</m> is algebraically closed.
+            </p>
+          </statement>
+        </exercise>
+
+        <remark>
+          <p>
+            The only new/non-elementary assertion in the Strong Nullstellensatz <m>I(V(J))\subseteq J</m>.
+            This can be rephrased as: Suppose <m>f</m> is a polynomial and <m>J</m> is an ideal such that <m>f \in I(V(J))</m>. 
+            Then some power of <m>f</m> belongs to <m>J</m>. 
+            Or, equivalently:
+          </p>
+
+          <blockquote>
+            <p>
+              Suppose <m>f</m> and <m>g_1, \dots, g_m</m> are polynomials such that whenever <m>P</m> is a zero of each of <m>g_1, \dots, g_m</m>, <m>P</m> is also a zero of <m>f</m>. 
+              Then <m>f^k = \sum_i h_i g_i</m> for some <m>k \geq 1</m> and some <m>h_i</m>’s.
+            </p>
+          </blockquote>
+
+          <p>
+            In other words, if, starting with the system of equations <m>g_1 = 0, \dots, g_m = 0</m>, adding on <m>f = 0</m> has no effect on the solution set, then it is because the new equation is an <q>algebraic consequence</q> of the previous — that is, <m>f</m> is an <m>m</m>-th root of some <m>k[x_1, \dots, x_n]</m>-linear combination of the <m>g_i</m>’s. 
+            (Note that the converse is obvious, and holds for any field: if <m>f = 0</m> is an <q>algebraic consequence</q> of the previous equations, then adding it to the list has no effect on the solution set.)
+          </p>
+        </remark>
+
+        <example>
+          <statement>
+            <p>
+              Recall that for <m>J = \langle x^2 + y^2 \rangle</m> and <m>k = {\mathbb{R}}</m>, we have that <m>J</m> is a radical ideal and yet <m>I(V(J)) = \langle x,y \rangle \supsetneq J</m>.
+            </p>
+
+            <p>
+              More concretely, the two systems of equations 
+              <me>
+                \begin{aligned}
+                  x^2 + y^2 &amp; =  0 \\
+                \end{aligned}
+              </me> 
+              and 
+              <me>
+                \begin{aligned}
+                  x^2 + y^2 &amp; =  0 \\
+                  x &amp; = 0  \\
+                \end{aligned}
+              </me> 
+              have the same set of solutions (over <m>{\mathbb{R}}</m>), and yet <m>x =0</m> is <em>not</em> an algebraic consequence of <m>x^2 + y^2 = 0</m> (no power of <m>x</m> is a <m>{\mathbb{R}}[x,y]</m>-multiple of <m>x^2 + y^2</m>).
+            </p>
+      
+            <p>
+              The Nullstellensatz tells us that such <q>bad behaviour</q> cannot occur if we changed the field to be <m>\mathbb{C}</m>. 
+              Indeed: 
+              <me>
+                V_{\mathbb{C}}(x^2 + y^2) = V_{\mathbb{C}}((x+iy)(x-iy)) = V_\mathbb{C}(x+iy) \cup V_\mathbb{C}(x-iy)
+              </me> 
+              and thus 
+              <me>
+                I(V_\mathbb{C}(x^2+y^2)) =I(V_\mathbb{C}(x+iy)) \cdot I(V_\mathbb{C}(x-iy))=\langle x+iy \rangle \langle x-iy \rangle = \langle x^2+y^2 \rangle = J.
+              </me>
+            </p>
+          </statement>
+        </example>
+  
+        <p>
+          The Strong Nullstellensatz Theorem is a consequence of the following more <q>abstract</q> one:
+        </p>
+
+        <theorem xml:id="thm-abstract-null"><title>Abstract Nullstellensatz</title>
+          <statement>
+            <p>
+              For any field <m>k</m> and integer <m>n \geq 0</m>, if <m>{\mathfrak m}</m> is any maximal ideal of the polynomial ring <m>k[x_1, \dots, x_n]</m>, then the canonical map <m>k \to k[x_1, \dots, x_n]/{\mathfrak m}</m> (given as the composition of the inclusion of <m>k</m> into <m>k[x_1, \dots, x_n]</m> followed by the canonical quotient map) is a finite extension of fields.
+            </p>
+          </statement>
+        </theorem>
+
+        <remark>
+          <p>
+            When <m>n = 1</m>, the Abstract Nullstellensatz Theorem is clear, since every maximal ideal of <m>k[x]</m> has the form <m>\langle p(x) \rangle</m> for an irreducible polynomial <m>p</m>.
+          </p>
+        </remark>
+
+        <remark>
+          <p>
+            An even more abstract but equivalent form of this theorem is: Given a field extension <m>k \subseteq L</m>, if <m>L</m> is finitely generated as a <em><m>k</m>-algebra</em> then <m>[L:k] &lt; \infty</m>.
+          </p>
+        </remark>
+
+        <p>
+          We won’t be proving the Abstract Nullstellensatz, but we will use it to draw some consequences.
+        </p>
+  
+        <p>
+          For a commutative ring <m>R</m>, let <m>\operatorname{mSpec}R</m> denote the set of its maximal ideals.
+        </p>
+
+        <corollary>
+          <statement>
+            <p>
+              For an algebraically closed field <m>k</m>, every maximal ideal of <m>k[x_1, \dots, x_n]</m> is of the form <m>(x_1 - a_1, \dots, x_n - a_n)</m> for elements <m>a_1, \dots, a_n \in k</m>. 
+              In fact, the function 
+              <me>
+                \Psi: \mathbb{A}^n_k \to \operatorname{mSpec}k[x_1, \dots, x_n]
+              </me> 
+              sending <m>(a_1 \dots, a_n)</m> to <m>(x_1 - a_1, \dots, x_n - a_n)</m> is a bijection.
+            </p>
+          </statement>
+
+          <proof>
+
+            <p>
+              We will prove this Corollary, taking the Abstract Nullstellensatz on faith.
+            </p>
+
+            <p>
+              The function is clearly well-defined (i.e., <m>(x_1 - a_1, \dots, x_n - a_n)</m> is a maximal ideal for any choice of <m>a_i</m>’s) and one-to-one. 
+              (If <m>a_i \ne a_i'</m> for at least one value of <m>i</m>, then <m>(x_1 - a_1, \dots, x_n - a_n)</m> and <m>(x_1 - a'_1, \dots, x_n - a'_n)</m> are distinct ideals). 
+              The surjectivity uses the Abstract Nullstellensatz:
+            </p>
+
+            <p>
+              Let <m>{\mathfrak m}\in \operatorname{mSpec}k[x_1, \dots, x_n]</m> and consider the composition <m>\phi: k \hookrightarrow k[x_1, \dots, x_n]/{\mathfrak m}</m> of canonical ring maps <m>k \hookrightarrow k[x_1, \dots, x_n] \twoheadrightarrow k[x_1, \dots, x_n]/{\mathfrak m}</m>. 
+              (It is injective since <m>k</m> is a field.) 
+              By the Abstract Nullstellensatz, it is a finite field extension. 
+              But since <m>k</m> is algebraically closed, it must be an isomorphism. 
+              Let <m>a_i = \phi^{-1}(\overline{x_i})</m>. 
+              Then it follows that <m>\overline{x_i - a_i} = 0</m> — i.e., <m>x_i - a_i \in {\mathfrak m}</m> for all <m>i</m>. 
+              Thus <m>{\mathfrak m}\supseteq (x_1 - a_1, \dots, x_n - a_n)</m> and since the latter is maximal, we must in fact have an equality.
+            </p>
+          </proof>
+        </corollary>
+
+        <remark>
+          <p>
+            When <m>n = 1</m>, the Corollary holds essentially by definition of <q>algebraically</q> closed: If <m>{\mathfrak m}</m> is any maximal ideal of <m>k[x]</m>, then <m>{\mathfrak m}= \langle p(x) \rangle</m> for a unique irreducible, monic polynomial <m>p(x)</m>. 
+            If <m>k</m> is algebraically closed, <m>p(x)</m> must be linear and thus of the form <m>(x- a)</m> for some <m>a \in k</m>.
+          </p>
+        </remark>
+
+        <remark>
+          <p>
+            The proof shows, more generally, that for any field <m>k</m>, there is a bijection between <m>\mathbb{A}^n_k</m> and the subset of those maximal ideals <m>{\mathfrak m}</m> in <m>k[x_1, \dots, x_n]</m> for which the canonical map of fields <m>k \to k[x_1, \dots, x_n]/{\mathfrak m}</m> is an isomorphism. Such maximal ideals are sometimes called <em><m>k</m>-rational</em>. 
+            (When <m>k</m> is algebraically closed, every maximal ideal is <m>k</m>-rational.)
+          </p>
+        </remark>
+
+        <corollary>
+          <statement>
+            <p>
+              If <m>k</m> is algebraically closed, then for any ideal <m>J</m> of <m>k[x_1, \dots, x_n]</m>, there is a bijection 
+              <me>
+                V(J)  \xrightarrow{\cong} \operatorname{mSpec}(k[x_1, \dots, x_n]/J)
+              </me> 
+              given by sending <m>(a_1, \dots, a_n)</m> to <m>\langle x_1 - a_1, \dots, x_n - a_n \rangle/J</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              The function is well defined and one-to-one, since if <m>(a_1, \dots, a_n) \in V(J)</m>, then 
+              <me>
+                \langle x_1 - a_1, \dots, x_n - a_n \rangle= I(\{(a_1, \dots, a_n)\} \supseteq I(V(J))) \supseteq J.
+              </me> 
+              The Nullstellensatz implies it is onto: If <m>{\mathfrak m}\in \operatorname{mSpec}(k[x_1, \dots, x_n]/J)</m> then <m>{\mathfrak m}= \tilde{{\mathfrak m}}/J</m> for some <m>\tilde{{\mathfrak m}} \in \operatorname{mSpec}k[x_1, \dots, x_n]</m>, and by the (Corollary to the) Nullstellensatz <m>\tilde{{\mathfrak m}} = (x_1 - a_1, \dots, x_n - a_n)</m> for some <m>a_1, \dots, a_n \in k</m>.
+            </p>
+          </proof>
+        </corollary>
+
+        <remark>
+          <p>
+            Since <m>V(J) = V(\sqrt{J})</m> the Corollary implies that <m>\operatorname{mSpec}(k[x_1, \dots, x_n]/J) \cong  \operatorname{mSpec}(k[x_1, \dots, x_n]/\sqrt{J})</m>. 
+            This holds in greater generality.
+          </p>
+        </remark>
+
+        <corollary xml:id="cor-weak-null">
+          <statement>
+            <p>
+              If <m>k</m> is algebraically closed and <m>J</m> is a proper ideal of <m>k[x_1, \dots, x_n]</m>, then <m>V(J) \ne \emptyset</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Since <m>J</m> is proper it is contained in some maximal ideal <m>{\mathfrak m}</m>. 
+              (As a technical point, this fact does not require Zorn’s Lemma in this setting, since the ring <m>k[x_1, \dots, x_n]</m> is noetherian.) 
+              So the result follows from the previous Corollary.
+            </p>
+          </proof>
+        </corollary>
+
+        <p>
+          Let’s return to the question of what can be said about <m>I(W \cap W')</m>:
+        </p>
+
+        <corollary>
+          <statement>
+            <p>
+              If <m>k</m> is algebraically closed and <m>W</m> and <m>W'</m> are two affine varieties in <m>\mathbb{A}^n_k</m>, then <m>I(W \cap W') = \sqrt{I(W) + I(W')}</m>.
+            </p>
+          </statement>
+
+          <proof>
+            <p>
+              Since both sides are radical ideals, by the Nullstellensatz it suffices to prove 
+              <me>
+                V(I(W \cap W')) = V (\sqrt{I(W) + I(W')}).
+              </me> 
+              This holds since <m>V(I(W \cap W')) = W \cap W'</m> and <m>V (\sqrt{I(W) + I(W')}) = V(I(W) + I(W')) = V(I(W)) \cap V(I(W')) = W \cap W'</m>.
+            </p>
+          </proof>
+        </corollary>
+
+        <example>
+          <statement>
+            <p>
+              The Corollary is false over <m>{\mathbb{R}}</m>: Take <m>W = V(y-x^2)</m> and <m>W' = V(y+1)</m> in <m>\mathbb{A}^2_{\mathbb{R}}</m>.
+              Then <m>I(W) = \langle y-x^2 \rangle</m> and <m>I(W') = \langle y+1 \rangle</m> (why?) and hence <m>\sqrt{I(W) + I(W')} \subsetneq k[x,y]</m> (since <m>k[x,y]/(y-x^2, y+1) \cong k[x]/(x^2+1) \ne 0</m>). 
+              But <m>W \cap W' = \emptyset</m> and so <m>I(W \cap W') = k[x,y]</m>.
+            </p>
+          </statement>
+        </example>
+
+        <definition xml:id="def-coordinate-ring">
+          <statement>
+            <p>
+              Given an affine variety <m>W \subseteq \mathbb{A}^n_k</m>, the <em>coordinate ring</em> of <m>W</m>, written <m>A(W)</m> is the <m>k</m>-algebra 
+              <me>
+                A(W) = \frac{k[x_1, \dots, x_n]}{I(W)}.
+              </me> 
+              Some authors denote this as <m>k[W]</m> instead.
+            </p>
+          </statement>
+        </definition>
+
+        <p>
+          If <m>W \subseteq \mathbb{A}^n_k</m> is an affine variety and <m>f</m> and <m>g</m> are two polynomials such that <m>f(P) = g(P)</m> for all <m>P \in W</m>, then <m>f-g \in I(W)</m> and hence <m>\overline{f} = \overline{g} \in A(W)</m>. 
+          This proves:
+        </p>
+
+        <proposition>
+          <statement>
+            <p>
+              For any field <m>k</m> and any affine variety <m>W \subseteq \mathbb{A}^n_k</m>, the ring <m>A(W)</m> is isomorphic to the ring of polynomial functions from <m>W</m> to <m>\mathbb{A}^1_k = k</m> (i.e., those functions from <m>W</m> to <m>k</m> that may be represented by an element of <m>k[x_1, \dots, x_n]</m> — it forms a ring using addition and multiplication in <m>k</m>).
+            </p>
+          </statement>
+        </proposition>
+
+        <p>
+          Note that <m>A(W)</m> is a reduced ring since <m>I(W)</m> is a radical ideal. 
+          Moreover, provided <m>k</m> is algebraically closed, every finitely generated, commutative, reduced <m>k</m>-algebra occurs, up to isomorphism, as the coordinate ring of some affine variety: Given such an algebra <m>A</m>, being finitely generated as a <m>k</m>-algebra means there is a surjection <m>k[x_1, \dots, x_n] \twoheadrightarrow A</m> for some <m>n</m>, and since <m>A</m> is reduced, the kernel <m>J</m> is a radical ideal. 
+          Taking <m>W = V(J)</m> we have <m>I(W) =I(V( J)) = J</m> by the Nullstellensatz and hence <m>A(W) \cong A</m>. 
+          The assumption that <m>k</m> is algebraically closed is needed here, due to examples such that <m>{\mathbb{R}}[x]/(x^2 + 1)</m>.
+        </p>
+
+        <corollary xml:id="cor-rel-null"><title>Relative Nullstellensatz</title>
+          <statement>
+            <p>
+              Assume <m>k</m> is an algebraically closed field and <m>W \subseteq \mathbb{A}^n_k</m> an affine variety. 
+              There is a bijective correspondence between affine subvarieties of <m>W</m> and radical ideals of <m>A(W)</m>, given by sending <m>V \subseteq W</m> to the ideal <m>I(V)/I(W)</m> of <m>A(W)</m>.
+            </p>
+          </statement>
+        </corollary>
+
+      </section>
+
+      <section xml:id="sec-zariski-topology"><title>The Zariski Topology</title>
+        
+        <p>
+          For simplicity, we will assume <m>k</m> is algebraically closed from now on. 
+          This is not really needed for many of the statements that follow, but it will be tedious to keep track of which ones really do, and in some cases where it is not needed, the proofs are harder without that assumption.
+        </p>
+  
+        <p>
+          Recall that a <em>topology</em> on a set <m>X</m> is a specified collection of subsets, known as the <em>open subsets</em>, such that 
+          (1) <m>X</m> is an open subset of <m>X</m>, 
+          (2) <m>\emptyset</m> is an open subset of <m>X</m>, 
+          (3) the intersection of any two open subsets it open, and 
+          (4) an arbitrary union of open subsets is open. 
+          Such a specified collection of open subsets makes <m>X</m> into a <em>topological space</em>. 
+          In any topological space, a <em>closed subset</em> is any subset that is the complement of an open one. 
+          One may equivalently describe a topology as a collection of specified <q>closed subsets</q> such that 
+          (1) <m>X</m> is an closed subset of <m>X</m>, 
+          (2) <m>\emptyset</m> is an closed subset of <m>X</m>, 
+          (3) the intersection of an arbitrary collection of closed subsets is closed, and 
+          (4) the union of two closed subsets is closed. 
+          By what we have proved above about affine varieties, we may define:
+        </p>
+  
+  <!-- div attr= class="defn"-->
+        <p>
+          <term>Definition 1</term>.  The <em>Zariski topology</em> on <m>\mathbb{A}^n_k</m> is the topology in which a subset is closed if and only if it is an affine variety (i.e., cut out by a collection of polynomial equations). Given a variety <m>X</m> in <m>\mathbb{A}^n_k</m>, the <em>Zariski topology</em> on <m>X</m> is the subspace topology — since <m>X</m> is closed in <m>\mathbb{A}^n_k</m>, this means that a subset <m>C</m> of <m>X</m> is closed if and only if <m>C</m> is an affine subvariety of <m>X</m> (i.e., an affine variety in <m>\mathbb{A}^n_k</m> that is contained in <m>X</m>).
+        </p><!--</div attr= class="defn">-->
+  
+        <p>
+          So, a subset <m>U</m> of <m>\mathbb{A}^n_k</m> is open iff <m>U = \mathbb{A}^n_k \setminus V(J)</m> for some ideal <m>J</m> (which we may take to be radical), and more generally a subset of an affine variety <m>X</m> is open iff it has the form <m>X \setminus V(J)</m> for some ideal <m>J</m> in <m>A(X)</m>.
+        </p>
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  The Zariski topology on <m>\mathbb{A}^n_k</m> is not Hausdorff (provided <m>n &gt; 0</m>). Indeed, the intersection of any two non-empty open sets is non-empty. This is equivalent to the assertion that the union of any two proper closed subset is proper. Using the Nullstellensatz, this is equivalent to the assertion that if <m>I</m> and <m>J</m> are any two non-zero ideals of <m>k[x_1, \dots, x_n]</m> then <m>I \cap J</m> is non-zero, and that holds since <m>k[x_1, \dots, x_n]</m> is a domain.
+        </p><!--</div attr= class="rem">-->
+  
+        <p>
+           <term>Monday, January 30</term>
+        </p>
+  
+  <!-- div attr= class="prop"-->
+        <p>
+          <term>Proposition 1</term>.  <em>Every affine variety <m>X</m> is (quasi-)compact for the Zariski topology — that is, every open cover of <m>X</m> by Zariski open subsets admits a finite subcover or, equivalently, if <m>\{C_\alpha\}</m> is a collection of closed subsets of <m>X</m> such that <m>\bigcap_\alpha C_\alpha= \emptyset</m> then <m>C_{\alpha_1} \cap \cdots \cap C_{\alpha_m}  = \emptyset</m> for some finite list <m>\alpha_1, \dots, \alpha_m</m> of indices.</em>
+        </p>
+  
+        <p>
+          <em>In fact, every open subset of <m>X</m> is (quasi-)compact.</em>
+        </p><!--</div attr= class="prop">-->
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> We may translate the first assertion into a statement about ideals in the ring <m>R = A(X)</m>: We need to prove that if <m>\{I_\alpha\}</m> is a collection of ideals such that <m>\sum_{\alpha} I_\alpha= R</m> then <m>I_{\alpha_1} + \cdots + I_{\alpha_m} = R</m> for some finite sub-collection. This holds since <m>\sum_{\alpha} I_\alpha= R</m> iff <m>1 \in \sum_{\alpha} I_\alpha</m> iff <m>1 \in I_{\alpha_1} + \cdots + I_{\alpha_m}</m> for some <m>\alpha_1, \dots, \alpha_m</m>.
+        </p>
+  
+        <p>
+          I’ll just sketch the proof of the second assertion: Let <m>U</m> be an open subset of an affine variety <m>X</m>, say <m>U = X
+  \setminus V_X(J)</m> for an ideal <m>J</m>. We have <m>J = \langle g_1, \dots, g_m \rangle</m> (Hilbert Basis Theorem), and so <m>U = \bigcup_{i=1}^m X \setminus V(g_i)</m>. Since this is a finite union, it suffices to show each <m>X \setminus V(g_i)</m> is quasi-compact. So, without loss, we may assume <m>U = X \setminus V(g)</m> for some <m>g</m>. The points of <m>U</m> are in bijective correspondence with the maximal ideals of the ring <m>A(X)[1/g]</m> and the closed subsets are given by ideals of this ring. So, the same proof as in the first part applies. ◻
+        </p><!--</div attr= class="proof">-->
+  
+        <p>
+          In the previous proof I used some notation not yet introduced:
+        </p>
+  
+  <!-- div attr= class="defn"-->
+        <p>
+          <term>Definition 1</term>.  Given an affine variety <m>X</m> and element <m>f \in A(X)</m> of its coordinate ring, let <m>V_X(f) = \{P \in X \mid f(P) = 0\}</m>. Equivalently, if <m>f = \tilde{f} + I(X)</m> for <m>\tilde{f} \in k[x_1, \dots, x_n]</m>, then <m>V_X(f) = V(I(X) + \langle \tilde{f} \rangle)</m>. Define <m>V_X(f_1, \dots, f_c)</m> for <m>f_1, \dots, f_c \in A(X)</m> in the evident way.
+        </p><!--</div attr= class="defn">-->
+  
+  <!-- div attr= class="prop"-->
+        <p>
+          <term>Proposition 1</term>.  <em>Every affine variety <m>X</m> is <em>noetherian</em> — by definition, this means the poset of its closed subsets satisfies the dcc.</em>
+        </p><!--</div attr= class="prop">-->
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> This holds since <m>A(X)</m> has the acc on (radical) ideals. ◻
+        </p><!--</div attr= class="proof">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  <m>\mathbb{A}^1_k</m> has dcc on closed subsets since the only proper closed subsets of it finite sets, and clearly every finite set has dcc on closed subsets.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Starting with a surface such as <m>X = V(z - x^2 - y^2)</m> (a paraboloid), a proper closed subset of <m>X</m> is a curve on <m>X</m> or a point on <m>X</m> or a finite union of such. Each (irreducible) curve on <m>X</m> has as its only proper closed subsets finite subsets. Accepting these facts (on faith) it is clear <m>X</m> has dcc on closed subsets.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="defn"-->
+        <p>
+          <term>Definition 1</term>.  An affine variety is <em>irreducible</em> if it cannot be written non-trivially as a union of closed subsets — that is, <m>X</m> is irreducible provided whenever <m>X = Y
+    \cup Z</m> with <m>Y</m> and <m>Z</m> affine subvarieties of <m>X</m>, we have <m>Y = X</m> or <m>Z = X</m>.
+        </p><!--</div attr= class="defn">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  A single plane in three-space is irreducible, but the union of a plane and a line (not contained in the plane) is reducible.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  A surface <m>X = V(f(x,y,z))</m> in three-space <m>\mathbb{A}^3_k</m> is irreducible if and only if <m>f</m> is irreducible or a power of an irreducible. This holds in general: The hypersurface <m>X = V(f(x_1, \dots, x_n))</m> in <m>\mathbb{A}^n_k</m> is irreducible if and only if <m>f</m> is irreducible or a power of an irreducible.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="exer"-->
+        <p>
+          <term>Exercise 1</term>.  Prove that I just asserted: Assume <m>f \in k[x_1, \dots, x_n]</m> is a polynomial without repeated factors (so that <m>\langle f \rangle</m> is a radical ideal). Prove <m>X = V(f)</m> is irreducible if and only if <m>f</m> is irreducible.
+        </p><!--</div attr= class="exer">-->
+  
+  <!-- div attr= class="exer"-->
+        <p>
+          <term>Exercise 1</term>.  Show an affine variety <m>X</m> is irreducible iff every non-empty open subset <m>U</m> of <m>X</m> is dense in <m>X</m> (i.e., the intersection of <m>U</m> with any other non-empty open subset of <m>X</m> is non-empty).
+        </p><!--</div attr= class="exer">-->
+  
+  <!-- div attr= class="prop"-->
+        <p>
+          <term>Proposition 1</term>.  <em>An affine variety <m>X</m> is irreducible if and only if <m>A(X)</m> is an integral domain. More generally, the collection of irreducible affine subvarieties of a given affine variety is in bijective correspondence with the collection of primes ideals in its coordinate ring.</em>
+        </p><!--</div attr= class="prop">-->
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> If <m>X</m> is not irreducible, then <m>X = Y \cup Z</m> for proper closed subsets <m>Y</m> and <m>Z</m> of <m>X</m>. It follows that <m>I(X) \subsetneq I(Y)</m>, <m>I(X) \subsetneq I(Z)</m>, and <m>I(X) = I(Y) \cap I(Z)</m>. So pick <m>g \in I(Y) \setminus I(X)</m> and <m>g \in I(Z) \setminus I(X)</m>. Then <m>fg \in I(X)</m>, proving <m>I(X)</m> is not prime.
+        </p>
+  
+        <p>
+          Suppose <m>I(X)</m> is not prime. Then there are polynomials <m>f</m> and <m>g</m> neither of which is in <m>I(X)</m> and yet <m>fg \in I(X)</m>. Set <m>J = I(X) + \langle f \rangle</m> and <m>L = I(X) + \langle g \rangle</m> and <m>Y = V(J)</m> and <m>Z = V(L)</m>. Then <m>Y \subsetneq X</m>, <m>Z \subseteq X</m> and <m>Y \cup Z = V(I) \cup V(L) = V(I \cdot L) = V(X)</m> since <m>I \cdot L = I(X)</m>.
+        </p>
+  
+        <p>
+          For the second assertion, we already know there is a bijective correspondence between affine subvarieties of an affine variety <m>V</m> and radical ideals of <m>A(V)</m>, given by <m>W \mapsto I(W)/I(V)</m>. The assertion holds since <m>I(W)/I(V)</m> is prime in <m>A(V)</m> if and only if <m>I(W)</m> is prime in <m>k[x_1, \dots, x_n]</m>. ◻
+        </p><!--</div attr= class="proof">-->
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>Every affine variety <m>X</m> is a finite union of irreducible closed subsets, <m>X = X_1 \cup \cdots \cup X_m</m>, such that <m>X_i \not\subseteq X_j</m> for all <m>i \ne j</m>. Moreover, the list of such subsets is unique up to ordering, and are known as the <em>irreducible components</em> of <m>X</m>.</em>
+        </p><!--</div attr= class="cor">-->
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> This holds since the ring <m>A(X)</m> is noetherian and hence has a finite number of minimal primes <m>{\mathfrak p}_1 \dots, {\mathfrak p}_m</m> — we take <m>X_i = V({\mathfrak p}_i)</m>. ◻
+        </p><!--</div attr= class="proof">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  In general, if <m>X</m> is any noetherian topological space (i.e., a space with dcc for closed subsets), then the conclusion of the previous Corollary holds. The existence is given as follows: If <m>X</m> is irreducible, then we may take <m>m = 1</m> and <m>X_1 = X</m>. If not, then <m>X = X_1 \cup Y_1</m> for two proper closed subsets <m>X_1</m> and <m>Y_1</m> of <m>X</m>. If both <m>X_1</m> and <m>Y_1</m> are irreducible, we are done; otherwise we can decompose at least one of them — without loss say it is <m>Y_1</m> that decomposes. Then <m>Y_1 = X_2 \cup Y_2</m> with <m>X_2</m> and <m>Y_2</m> closed a proper in <m>Y_1</m>. Continuing in the fashion gives a strictly descending chain <m>X \supsetneq Y_1 \subsetneq Y_2 \subsetneq</m> of closed subsets. By dcc, this process must stop after a finite number of steps, and thus <m>X = X_1 \cup \cdots \cup X_m</m> for some irreducible closed subsets <m>X_1, \dots, X_m</m>. If <m>X_i \subseteq X_j</m> for some <m>i \ne j</m>, delete <m>X_i</m> from the list.
+        </p>
+  
+        <p>
+          I’ll skip a proof of uniqueness.
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Consider <m>X = V(xy, xz) = V(x) \cap V(y,z)</m> in <m>\mathbb{A}^3_k</m>. That is <m>X</m> is the union of a line and a plane, specifically the <m>x</m>-axis and the <m>yz</m>-plane. Then <m>X</m> has two irreducible components, the line and the plane.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  For <m>f \in k[x_1, \dots, x_n]</m>, the irreducible components of <m>V(f)</m> are <m>V(g_1), \dots, V(g_m)</m> where <m>f = \prod_i g_i^{e_i}</m> for <m>e_i \geq 1</m> and <m>g_i</m> irreducible.
+        </p><!--</div attr= class="ex">-->
+  
+        <p>
+           <term>Wednesday, February 1</term>
+        </p>
+  
+        <p>
+          One particular kind of Zariski open subset is particularly importent:
+        </p>
+  
+  <!-- div attr= class="defn"-->
+        <p>
+          <term>Definition 1</term>.  A <em>distinguished open subset</em> of an affine variety <m>X</m> is an open subset of the form <me>D_X(f) = \{ P \in X \mid f(P) \ne 0\}</me> for some element <m>f \in A(X)</m>. (We can also think of <m>D_X(f) = X \cap D(f)</m> for <m>f \in k[x_1, \dots, x_n]</m>.)
+        </p><!--</div attr= class="defn">-->
+  
+  <!-- div attr= class="exer"-->
+        <p>
+          <term>Exercise 1</term>.  Let <m>X</m> be any affine variety.
+        </p>
+  
+        <p>
+          Show <m>D_X(f) \cap D_X(g) = D_X(fg)</m>; in particular, the intersection of any two distinguished open subsets of <m>X</m> is again distinguished.
+        </p>
+  
+        <p>
+          Show that the collection of distinguished open subsets of <m>X</m> form a <q>basis</q> for the Zariski topology on <m>X</m>. Recall that a collection of subsets <m>\mathcal B</m> for a set <m>T</m> is a <em>basis for a topology</em> if:
+        </p>
+  
+        <p><ul>
+          <li>
+                <p>
+          for every point <m>P</m> there is a <m>U \in \mathcal B</m> with <m>P \in U</m> and
+        </p>
+          </li>
+  
+          <li>
+                <p>
+          whenever <m>P \in U_1 \cap U_2</m> for some <m>U_1, U_2 \in \mathcal B</m>, there is a <m>U_3 \in \mathcal B</m> such that <m>P \in U_3 \subseteq U_1 \cap U_2</m>.
+        </p>
+          </li>
+  
+        </ul></p>
+  
+        <p>
+          And the topology generated by such a basis is the collection of subsets of <m>T</m> that are arbitrary unions of members of <m>\mathcal B</m>. So, you are being asked to show the above two properties hold for the collection of distinguished open sets and that every Zariski open set is a union of distinguished ones.
+        </p><!--</div attr= class="exer">-->
+
+      </section>
+
+      <section xml:id="sec-dimension"><title>Dimension</title>
+        
+        <p>
+          <term>Definition 1</term>.  The <em>dimension</em> of a noetherian topological space <m>X</m>, written <m>\operatorname{dim}(X) \in \{0, 1, 2, \dots, \infty\}</m>, is the supremum of the set of all integers <m>n \geq 0</m> such that there exists a chain <me>\emptyset \subsetneq Y_0 \subsetneq Y_1 \subsetneq \cdots \subsetneq Y_n \subseteq X</me> with each <m>Y_i</m> an irreducible closed subset of <m>X</m>. (The dimension of the empty set is <m>-\infty</m>. It is possible that the dimension of a noetherian space is infinite.)
+        </p>
+  
+        <p>
+          Given a closed irreducible subset <m>Y</m> of <m>X</m>, the <em>codimension</em> of <m>Y</m> in <m>X</m>, written <m>\operatorname{codim}_X(Y)</m>, the supremum over all <m>n</m> such that a choice of the form <me>Y = Y_0 \subsetneq Y_1 \subsetneq \cdots \subsetneq Y_n \subseteq X.</me>
+        </p><!--</div attr= class="defn">-->
+  
+  <!-- div attr= xml:id="rem131" class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Note that we only define codimension when <m>Y</m> is irreducible. When <m>Y</m> is reducible, sometimes one defines <m>\operatorname{codim}_X(Y)</m> to be the <em>minimum</em> value of <m>\operatorname{codim}_X(Y')</m> where <m>Y'</m> ranges over the irreducible components of <m>Y</m>.
+        </p><!--</div attr= xml:id="rem131" class="rem">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Topologize <m>\mathbb{N}</m> by declaring a subset to be closed if and only if it is of the form <m>\{0, 1, \dots, n\}</m> for some <m>-1 \leq n \leq \infty</m>. Then <m>\mathbb{N}</m> is a noetherian space but has infinite dimension. There exist noetherian commutative rings <m>R</m> such that <m>\operatorname{dim}\operatorname{Spec}(R) = \infty</m>. (This cannot occur for local rings nor for rings that are finitely generated as <m>k</m>-algebras.)
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Observe that every maximal chain of irreducible closed subsets (i.e., every chain that cannot be made longer and inserting new terms) of <m>X</m> has <m>Y_n</m> equal to an irreducible component of <m>X</m> and has <m>Y_0</m> equal to a single point. In particular, <me>\operatorname{dim}(X) = \max \{\operatorname{dim}(Y) \mid \text{$Y$ is an irreducible component of $X$}\}</me> and <me>\operatorname{dim}(X) = \max \{\operatorname{codim}_X(P) \mid \text{$P$ is any point of $X$}\}.</me>
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Let <m>X = V(xy,xz)</m>, the union of the <m>x</m>-axis and the <m>yz</m>-plane. The dimension of <m>X</m> is two. It is clearly at least two, since we have the chain with <m>Y_0</m> being any point on the <m>yz</m>-plane, <m>Y_1</m> being any line in this plane and containing this point, and <m>Y_2</m> being the whole plane. It is harder to see that it is at most two. This is an example of a variety that fails to be <q>equi-dimensional</q> — the variety has two irreducible components, but they have different dimensions.
+        </p>
+  
+        <p>
+          Let <m>Y = V(x) \subseteq X</m>, the <m>yz</m>-plane. Then <m>\operatorname{codim}_X(Y) = 0</m> since the only closed subsets strictly between <m>Y</m> and <m>X</m> are given by <m>Y</m> together with a finite set of points on the line.
+        </p>
+  
+        <p>
+          Let <m>Z = V(y,z)</m>, the <m>x</m>-axis. Then <m>\operatorname{codim}_X(Z)</m> is also <m>0</m> by similar reasoning. Since <m>\operatorname{dim}(Z)  = 1</m>, this is a bit counter-intuitive.
+        </p>
+  
+        <p>
+          Let <m>W = V(x,y,z)</m>. When <m>\operatorname{codim}_X(W) = 2</m>. It’s at least two since we have the chain <m>W \subsetneq V(x,y) \subsetneq Y \subseteq X</m>; it is less obvious, but true, that it is exactly two.
+        </p>
+  
+        <p>
+          According to Remark <xref ref="rem131" />, what is <m>\operatorname{codim}_{\mathbb{A}^3}(X)</m>?
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  The dimension of <m>\mathbb{A}^n_k</m> is clearly at least <m>n</m> since <me>\emptyset \ne \mathbb{A}^0_k \subsetneq \mathbb{A}^1_k \subsetneq \mathbb{A}^3_k \subsetneq \cdots \subsetneq \mathbb{A}^{n}_k.</me> It is much less obvious that it is exactly <m>n</m>.
+        </p><!--</div attr= class="ex">-->
+  
+        <p>
+          The following result follows from the fact that there is an order-reversing bijections between primes ideals of <m>A(X)</m> and irreducible closed subsets of <m>X</m>:
+        </p>
+  
+  <!-- div attr= class="prop"-->
+        <p>
+          <term>Proposition 1</term>.  <em>The dimension of an affine variety <m>X</m> is equal to the Krull dimension of its coordinate ring <m>A(X)</m>. The codimension of an irreducible closed subset <m>Y</m> of <m>X</m> is the height of the corresponding prime ideal of <m>A(X)</m>.</em>
+        </p><!--</div attr= class="prop">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Using the definition in Remark <xref ref="rem131" />, the codimension of an arbitrary closed subset <m>Y</m> is the height of the corresponding radical ideal.
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="thm"-->
+        <p>
+          <term>Theorem 1</term> (Properties of dimension).  <em>Assume <m>k</m> is algebraically closed and <m>X</m> and <m>Y</m> are irreducible affine <m>k</m>-varieties</em>
+        </p>
+  
+        <p><ol>
+          <li>
+                <p>
+          <em>We have <m>\operatorname{dim}(X \times Y) = \operatorname{dim}(X) + \operatorname{dim}(Y)</m> (see the problem set for the definition of <m>X \times Y</m>).</em>
+        </p>
+          </li>
+  
+          <li>
+                <p>
+          <em>(Catenary property) If <m>Y \subseteq X</m> then <m>\operatorname{dim}(X) = \operatorname{dim}(Y) + \operatorname{codim}_X(Y)</m>.</em>
+        </p>
+          </li>
+  
+          <li>
+                <p>
+          <em>(Krull’s Theorem). If <m>f</m> is a non-zero, non-unit element of <m>A(X)</m> (i.e. <m>\emptyset \subsetneq V_X(f) \subsetneq X</m>), then every irreducible component of <m>V_X(f)</m> has codimension <m>1</m> in <m>X</m> (or, equivalently thanks to (b), has dimension <m>\operatorname{dim}(X) - 1</m>). In particular, <m>\operatorname{dim}V_X(f) = \operatorname{dim}(X) - 1</m>.</em>
+        </p>
+          </li>
+  
+        </ol></p><!--</div attr= class="thm">-->
+  
+        <p>
+          All of these results are best proven in a class on commutative algebra, and so I’ll just skip their proofs.
+        </p>
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  If <m>f</m> is any non-zero, non-contant polynomial in <m>k[x_1, \dots, x_n]</m>, then <m>\operatorname{dim}V(f) = n - 1</m>.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="exer"-->
+        <p>
+          <term>Exercise 1</term>.  What goes wrong in this Theorem if we don’t assume <m>X</m> and <m>Y</m> are irreducible?
+        </p><!--</div attr= class="exer">-->
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>The dimension of <m>\mathbb{A}^n_k</m> is <m>n</m>.</em>
+        </p><!--</div attr= class="cor">-->
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> We have <m>\mathbb{A}^n_k = \mathbb{A}^1_k \times \cdots \times \mathbb{A}^1_k</m> and <m>\operatorname{dim}(\mathbb{A}^1_k) = 1</m>. The latter holds since <m>k[x]</m> is a PID. ◻
+        </p><!--</div attr= class="proof">-->
+  
+        <p>
+          A special case of the Catenary Property is:
+        </p>
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>For every point <m>P</m> of an irreducible variety <m>X</m>, we have <m>\operatorname{codim}_X(P) = \operatorname{dim}(X)</m>.</em>
+        </p><!--</div attr= class="cor">-->
+  
+        <p>
+          The previous result says that the dimension of an irreducible variety is that same near every point. In algebra terms, it says that if <m>R</m> is an integral domain and is a finitely generated <m>k</m>-algebra, then <m>\operatorname{dim}R_{\mathfrak m}</m> is the same for all maximal ideals <m>{\mathfrak m}</m>.
+        </p>
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>Assume <m>X</m> is a (not necessarily irreducible) affine variety <m>X</m> and let <m>f \in A(X)</m>. Let <m>X = X_1 \cup \cdots \cup X_m</m> be the decomposition of <m>X</m> into its irreducible components and assume they are ordered so that <m>\operatorname{dim}(X_i) = \operatorname{dim}(X)</m> for <m>1 \leq i \leq k</m> and <m>\operatorname{dim}(X_i) &lt; \operatorname{dim}(X)</m> for <m>i &gt; k</m>.</em>
+        </p>
+  
+        <p>
+          <em>If <m>V_X(f) \cap X_i \subsetneq X_i</m> for all <m>1 \leq i \leq k</m> (i.e., <m>f</m> is not identically zero on any irreducible component of <m>X</m> of maximal dimension) and <m>V_X(f) \cap X_i \ne \emptyset</m> for at least one <m>i</m> such that <m>1 \leq i \leq k</m> (i.e., <m>f</m> has a zero on at least one irreducible component of <m>X</m> of maximal dimension), then <m>\operatorname{dim}V_X(f) = \operatorname{dim}(X) - 1</m>.</em>
+        </p>
+  
+        <p>
+          <em>If <m>X</m> is equi-dimensional (i.e., <m>k = m</m>) then <m>V_X(f)</m> is also equi-dimensional.</em>
+        </p><!--</div attr= class="cor">-->
+  
+        <p>
+           <term>Friday, February 3</term>
+        </p>
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> Since <m>V_X(f) = \bigcup_i (V_X(f) \cap X_i)</m> we have <me>\label{E22}
+    \operatorname{dim}V_X(f) = \max \{ \operatorname{dim}V_X(f) \cap X_i\}.</me>
+        </p>
+  
+        <p>
+          For any <m>i</m> such that <m>\emptyset \subsetneq V_X(f) \cap X_i  \subsetneq X_i</m> the Theorem applies (using that <m>V_X(f) \cap X_i = V_{X_i}(f)</m>) to give that <m>V_X(f) \cap X_i</m> is equi-dimensional of dimension equal to <m>\operatorname{dim}(X_i) -1</m>. If <m>1 \leq i \leq k</m>, then by assumption we have <m>\operatorname{dim}(X_i) = \operatorname{dim}(X)</m> and either (a) <m>V_X(f) \cap X_i = \emptyset</m> or (b) <m>\emptyset \subsetneq V_X(f) \cap X_i  \subsetneq X_i</m>, and moreover condition (b) holds for at least one such <m>i</m>. It follows that <m>\max \{ \operatorname{dim}V_X(f) \cap X_i \mid 1 \leq i \leq k\} =\operatorname{dim}(X) - 1</m>. If <m>i &gt; k</m>, then <m>\operatorname{dim}(V_X(f) \cap X_i) \leq \operatorname{dim}(X_i) \leq \operatorname{dim}(X) - 1</m>. The first assertion thus follows from <xref ref="E22" />.
+        </p>
+  
+        <p>
+          If <m>k = m</m>, then for each <m>i</m> we have that <m>V_X(f) \cap X_i</m> is either empty or is equi-dimensional of dimension <m>\operatorname{dim}(X) -1</m>, and it is non-empty for at least one <m>i</m>. The second assertion follows. ◻
+        </p><!--</div attr= class="proof">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Take <m>X = V(xy, xz)</m>. Let <m>f = x-1</m>. Then <m>\operatorname{dim}V_X(f) = 0 = \operatorname{dim}(X) - 2</m>. Why doesn’t this contradict the Corollary? Let <m>g = x</m>. Then <m>\operatorname{dim}V_X(g) = 2 = \operatorname{dim}(X)</m>. Why doesn’t this contradict the Corollary?
+        </p>
+  
+        <p>
+          Let <m>h = y-z</m>. Then the Corollary <em>does</em> apply, and we have <m>V_X(h) = 1 = \operatorname{dim}(X) -1</m>.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Note that if <m>X = V_{{\mathbb{R}}}(z - x^2 - y^2)</m> and <m>f = z</m>, then <m>X \cap V_{{\mathbb{R}}}(f) = \{(0,0,0)\}</m>. Why does this not contradict Krull’s Theorem?
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Say <m>f, g \in k[x_1, \dots, x_n]</m> are non-constant polynomials with <m>n \geq 2</m> and assume that <m>f</m> and <m>g</m> have no common irreducible factors and that <m>V(f,g) \ne \emptyset</m>. Then <m>\operatorname{dim}V(f,g) = n - 2</m>.
+        </p>
+  
+        <p>
+          To see this, recall the irreducible components of <m>V(f)</m> are <m>V(p_i)</m> where <m>f = \prod_i p_i^{e_i}</m>, and they are each of dimension <m>n-1</m>. The fact that <m>p_i</m> is not a factor of <m>g</m> gives that <m>g</m> is not identically <m>0</m> on <m>V(p_i)</m>, for all <m>i</m>. So, the Corollary applies.
+        </p><!--</div attr= class="ex">-->
+      </section>
+
+      <section xml:id="sec-regular-functions"><title>Regular Functions</title>
+        
+        <p>
+          <term>Definition 1</term>.  The <em>dimension</em> of a noetherian topological space <m>X</m>, written <m>\operatorname{dim}(X) \in \{0, 1, 2, \dots, \infty\}</m>, is the supremum of the set of all integers <m>n \geq 0</m> such that there exists a chain <me>\emptyset \subsetneq Y_0 \subsetneq Y_1 \subsetneq \cdots \subsetneq Y_n \subseteq X</me> with each <m>Y_i</m> an irreducible closed subset of <m>X</m>. (The dimension of the empty set is <m>-\infty</m>. It is possible that the dimension of a noetherian space is infinite.)
+        </p>
+  
+        <p>
+          Given a closed irreducible subset <m>Y</m> of <m>X</m>, the <em>codimension</em> of <m>Y</m> in <m>X</m>, written <m>\operatorname{codim}_X(Y)</m>, the supremum over all <m>n</m> such that a choice of the form <me>Y = Y_0 \subsetneq Y_1 \subsetneq \cdots \subsetneq Y_n \subseteq X.</me>
+        </p><!--</div attr= class="defn">-->
+  
+  <!-- div attr= xml:id="rem131" class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Note that we only define codimension when <m>Y</m> is irreducible. When <m>Y</m> is reducible, sometimes one defines <m>\operatorname{codim}_X(Y)</m> to be the <em>minimum</em> value of <m>\operatorname{codim}_X(Y')</m> where <m>Y'</m> ranges over the irreducible components of <m>Y</m>.
+        </p><!--</div attr= xml:id="rem131" class="rem">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Topologize <m>\mathbb{N}</m> by declaring a subset to be closed if and only if it is of the form <m>\{0, 1, \dots, n\}</m> for some <m>-1 \leq n \leq \infty</m>. Then <m>\mathbb{N}</m> is a noetherian space but has infinite dimension. There exist noetherian commutative rings <m>R</m> such that <m>\operatorname{dim}\operatorname{Spec}(R) = \infty</m>. (This cannot occur for local rings nor for rings that are finitely generated as <m>k</m>-algebras.)
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Observe that every maximal chain of irreducible closed subsets (i.e., every chain that cannot be made longer and inserting new terms) of <m>X</m> has <m>Y_n</m> equal to an irreducible component of <m>X</m> and has <m>Y_0</m> equal to a single point. In particular, <me>\operatorname{dim}(X) = \max \{\operatorname{dim}(Y) \mid \text{$Y$ is an irreducible component of $X$}\}</me> and <me>\operatorname{dim}(X) = \max \{\operatorname{codim}_X(P) \mid \text{$P$ is any point of $X$}\}.</me>
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Let <m>X = V(xy,xz)</m>, the union of the <m>x</m>-axis and the <m>yz</m>-plane. The dimension of <m>X</m> is two. It is clearly at least two, since we have the chain with <m>Y_0</m> being any point on the <m>yz</m>-plane, <m>Y_1</m> being any line in this plane and containing this point, and <m>Y_2</m> being the whole plane. It is harder to see that it is at most two. This is an example of a variety that fails to be <q>equi-dimensional</q> — the variety has two irreducible components, but they have different dimensions.
+        </p>
+  
+        <p>
+          Let <m>Y = V(x) \subseteq X</m>, the <m>yz</m>-plane. Then <m>\operatorname{codim}_X(Y) = 0</m> since the only closed subsets strictly between <m>Y</m> and <m>X</m> are given by <m>Y</m> together with a finite set of points on the line.
+        </p>
+  
+        <p>
+          Let <m>Z = V(y,z)</m>, the <m>x</m>-axis. Then <m>\operatorname{codim}_X(Z)</m> is also <m>0</m> by similar reasoning. Since <m>\operatorname{dim}(Z)  = 1</m>, this is a bit counter-intuitive.
+        </p>
+  
+        <p>
+          Let <m>W = V(x,y,z)</m>. When <m>\operatorname{codim}_X(W) = 2</m>. It’s at least two since we have the chain <m>W \subsetneq V(x,y) \subsetneq Y \subseteq X</m>; it is less obvious, but true, that it is exactly two.
+        </p>
+  
+        <p>
+          According to Remark <xref ref="rem131" />, what is <m>\operatorname{codim}_{\mathbb{A}^3}(X)</m>?
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  The dimension of <m>\mathbb{A}^n_k</m> is clearly at least <m>n</m> since <me>\emptyset \ne \mathbb{A}^0_k \subsetneq \mathbb{A}^1_k \subsetneq \mathbb{A}^3_k \subsetneq \cdots \subsetneq \mathbb{A}^{n}_k.</me> It is much less obvious that it is exactly <m>n</m>.
+        </p><!--</div attr= class="ex">-->
+  
+        <p>
+          The following result follows from the fact that there is an order-reversing bijections between primes ideals of <m>A(X)</m> and irreducible closed subsets of <m>X</m>:
+        </p>
+  
+  <!-- div attr= class="prop"-->
+        <p>
+          <term>Proposition 1</term>.  <em>The dimension of an affine variety <m>X</m> is equal to the Krull dimension of its coordinate ring <m>A(X)</m>. The codimension of an irreducible closed subset <m>Y</m> of <m>X</m> is the height of the corresponding prime ideal of <m>A(X)</m>.</em>
+        </p><!--</div attr= class="prop">-->
+  
+  <!-- div attr= class="rem"-->
+        <p>
+          <em>Remark 1</em>.  Using the definition in Remark <xref ref="rem131" />, the codimension of an arbitrary closed subset <m>Y</m> is the height of the corresponding radical ideal.
+        </p><!--</div attr= class="rem">-->
+  
+  <!-- div attr= class="thm"-->
+        <p>
+          <term>Theorem 1</term> (Properties of dimension).  <em>Assume <m>k</m> is algebraically closed and <m>X</m> and <m>Y</m> are irreducible affine <m>k</m>-varieties</em>
+        </p>
+  
+        <p><ol>
+          <li>
+                <p>
+          <em>We have <m>\operatorname{dim}(X \times Y) = \operatorname{dim}(X) + \operatorname{dim}(Y)</m> (see the problem set for the definition of <m>X \times Y</m>).</em>
+        </p>
+          </li>
+  
+          <li>
+                <p>
+          <em>(Catenary property) If <m>Y \subseteq X</m> then <m>\operatorname{dim}(X) = \operatorname{dim}(Y) + \operatorname{codim}_X(Y)</m>.</em>
+        </p>
+          </li>
+  
+          <li>
+                <p>
+          <em>(Krull’s Theorem). If <m>f</m> is a non-zero, non-unit element of <m>A(X)</m> (i.e. <m>\emptyset \subsetneq V_X(f) \subsetneq X</m>), then every irreducible component of <m>V_X(f)</m> has codimension <m>1</m> in <m>X</m> (or, equivalently thanks to (b), has dimension <m>\operatorname{dim}(X) - 1</m>). In particular, <m>\operatorname{dim}V_X(f) = \operatorname{dim}(X) - 1</m>.</em>
+        </p>
+          </li>
+  
+        </ol></p><!--</div attr= class="thm">-->
+  
+        <p>
+          All of these results are best proven in a class on commutative algebra, and so I’ll just skip their proofs.
+        </p>
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  If <m>f</m> is any non-zero, non-contant polynomial in <m>k[x_1, \dots, x_n]</m>, then <m>\operatorname{dim}V(f) = n - 1</m>.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="exer"-->
+        <p>
+          <term>Exercise 1</term>.  What goes wrong in this Theorem if we don’t assume <m>X</m> and <m>Y</m> are irreducible?
+        </p><!--</div attr= class="exer">-->
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>The dimension of <m>\mathbb{A}^n_k</m> is <m>n</m>.</em>
+        </p><!--</div attr= class="cor">-->
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> We have <m>\mathbb{A}^n_k = \mathbb{A}^1_k \times \cdots \times \mathbb{A}^1_k</m> and <m>\operatorname{dim}(\mathbb{A}^1_k) = 1</m>. The latter holds since <m>k[x]</m> is a PID. ◻
+        </p><!--</div attr= class="proof">-->
+  
+        <p>
+          A special case of the Catenary Property is:
+        </p>
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>For every point <m>P</m> of an irreducible variety <m>X</m>, we have <m>\operatorname{codim}_X(P) = \operatorname{dim}(X)</m>.</em>
+        </p><!--</div attr= class="cor">-->
+  
+        <p>
+          The previous result says that the dimension of an irreducible variety is that same near every point. In algebra terms, it says that if <m>R</m> is an integral domain and is a finitely generated <m>k</m>-algebra, then <m>\operatorname{dim}R_{\mathfrak m}</m> is the same for all maximal ideals <m>{\mathfrak m}</m>.
+        </p>
+  
+  <!-- div attr= class="cor"-->
+        <p>
+          <term>Corollary 1</term>.  <em>Assume <m>X</m> is a (not necessarily irreducible) affine variety <m>X</m> and let <m>f \in A(X)</m>. Let <m>X = X_1 \cup \cdots \cup X_m</m> be the decomposition of <m>X</m> into its irreducible components and assume they are ordered so that <m>\operatorname{dim}(X_i) = \operatorname{dim}(X)</m> for <m>1 \leq i \leq k</m> and <m>\operatorname{dim}(X_i) &lt; \operatorname{dim}(X)</m> for <m>i &gt; k</m>.</em>
+        </p>
+  
+        <p>
+          <em>If <m>V_X(f) \cap X_i \subsetneq X_i</m> for all <m>1 \leq i \leq k</m> (i.e., <m>f</m> is not identically zero on any irreducible component of <m>X</m> of maximal dimension) and <m>V_X(f) \cap X_i \ne \emptyset</m> for at least one <m>i</m> such that <m>1 \leq i \leq k</m> (i.e., <m>f</m> has a zero on at least one irreducible component of <m>X</m> of maximal dimension), then <m>\operatorname{dim}V_X(f) = \operatorname{dim}(X) - 1</m>.</em>
+        </p>
+  
+        <p>
+          <em>If <m>X</m> is equi-dimensional (i.e., <m>k = m</m>) then <m>V_X(f)</m> is also equi-dimensional.</em>
+        </p><!--</div attr= class="cor">-->
+  
+        <p>
+           <term>Friday, February 3</term>
+        </p>
+  
+  <!-- div attr= class="proof"-->
+        <p>
+          <em>Proof.</em> Since <m>V_X(f) = \bigcup_i (V_X(f) \cap X_i)</m> we have <me>\label{E22}
+    \operatorname{dim}V_X(f) = \max \{ \operatorname{dim}V_X(f) \cap X_i\}.</me>
+        </p>
+  
+        <p>
+          For any <m>i</m> such that <m>\emptyset \subsetneq V_X(f) \cap X_i  \subsetneq X_i</m> the Theorem applies (using that <m>V_X(f) \cap X_i = V_{X_i}(f)</m>) to give that <m>V_X(f) \cap X_i</m> is equi-dimensional of dimension equal to <m>\operatorname{dim}(X_i) -1</m>. If <m>1 \leq i \leq k</m>, then by assumption we have <m>\operatorname{dim}(X_i) = \operatorname{dim}(X)</m> and either (a) <m>V_X(f) \cap X_i = \emptyset</m> or (b) <m>\emptyset \subsetneq V_X(f) \cap X_i  \subsetneq X_i</m>, and moreover condition (b) holds for at least one such <m>i</m>. It follows that <m>\max \{ \operatorname{dim}V_X(f) \cap X_i \mid 1 \leq i \leq k\} =\operatorname{dim}(X) - 1</m>. If <m>i &gt; k</m>, then <m>\operatorname{dim}(V_X(f) \cap X_i) \leq \operatorname{dim}(X_i) \leq \operatorname{dim}(X) - 1</m>. The first assertion thus follows from <xref ref="E22" />.
+        </p>
+  
+        <p>
+          If <m>k = m</m>, then for each <m>i</m> we have that <m>V_X(f) \cap X_i</m> is either empty or is equi-dimensional of dimension <m>\operatorname{dim}(X) -1</m>, and it is non-empty for at least one <m>i</m>. The second assertion follows. ◻
+        </p><!--</div attr= class="proof">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Take <m>X = V(xy, xz)</m>. Let <m>f = x-1</m>. Then <m>\operatorname{dim}V_X(f) = 0 = \operatorname{dim}(X) - 2</m>. Why doesn’t this contradict the Corollary? Let <m>g = x</m>. Then <m>\operatorname{dim}V_X(g) = 2 = \operatorname{dim}(X)</m>. Why doesn’t this contradict the Corollary?
+        </p>
+  
+        <p>
+          Let <m>h = y-z</m>. Then the Corollary <em>does</em> apply, and we have <m>V_X(h) = 1 = \operatorname{dim}(X) -1</m>.
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Note that if <m>X = V_{{\mathbb{R}}}(z - x^2 - y^2)</m> and <m>f = z</m>, then <m>X \cap V_{{\mathbb{R}}}(f) = \{(0,0,0)\}</m>. Why does this not contradict Krull’s Theorem?
+        </p><!--</div attr= class="ex">-->
+  
+  <!-- div attr= class="ex"-->
+        <p>
+          <term>Example 1</term>.  Say <m>f, g \in k[x_1, \dots, x_n]</m> are non-constant polynomials with <m>n \geq 2</m> and assume that <m>f</m> and <m>g</m> have no common irreducible factors and that <m>V(f,g) \ne \emptyset</m>. Then <m>\operatorname{dim}V(f,g) = n - 2</m>.
+        </p>
+  
+        <p>
+          To see this, recall the irreducible components of <m>V(f)</m> are <m>V(p_i)</m> where <m>f = \prod_i p_i^{e_i}</m>, and they are each of dimension <m>n-1</m>. The fact that <m>p_i</m> is not a factor of <m>g</m> gives that <m>g</m> is not identically <m>0</m> on <m>V(p_i)</m>, for all <m>i</m>. So, the Corollary applies.
+        </p><!--</div attr= class="ex">-->
+
+      </section>
+
+    </chapter>
+
+    <backmatter xml:id="backmatter">
+      <title>Backmatter</title>
+
+      <colophon>
+        <p> This book was authored in <pretext />. </p>
+      </colophon>
+
+    </backmatter>
+
+  </book>
+</pretext>
